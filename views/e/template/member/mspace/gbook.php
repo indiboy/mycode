@@ -87,7 +87,7 @@ function CheckAll(form)
             <td height="23"> 
               <table width="100%" border="0" cellspacing="1" cellpadding="3">
                 <tr>
-                  <td width="5%"><div align="center"><input class="input input-auto" type='checkbox' name='chkall' value='on' onClick='CheckAll(this.form)'></div></td>
+                  <td width="5%"><div align="center"><input class="" type='checkbox' name='chkall' value='on' onClick='CheckAll(this.form)'></div></td>
                   <td width="95%">
                     <?=$returnpage?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="input input-auto" type='submit' name='submit' value='批量删除'>
                     <input class="input input-auto" name="enews" type="hidden" id="enews" value="DelMemberGbook_All"> </td>

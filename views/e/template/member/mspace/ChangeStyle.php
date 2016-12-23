@@ -47,7 +47,7 @@ $public_diyr['pagetitle']='选择空间模板';
 $url="<a href='../../../'>首页</a>&nbsp;>&nbsp;<a href='../cp/'>会员中心</a>&nbsp;>&nbsp;选择空间模板";
 require(ECMS_PATH.'e/template/incfile/header.php');
 ?>
-<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered table-striped">
   <tr>
     <td valign="top"><?=$templist?></td>
   </tr>

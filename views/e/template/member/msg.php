@@ -83,7 +83,7 @@ function CheckAll(form)
 			?>
             <tr bgcolor="#FFFFFF"> 
               <td><div align="center"> 
-                  <input class="input input-auto" type=checkbox name=chkall value=on onclick=CheckAll(this.form)>
+                  <input class="" type=checkbox name=chkall value=on onclick=CheckAll(this.form)>
                 </div></td>
               <td colspan="4"><input class="button" type="submit" name="Submit2" value="删除选中">
                 <input class="input input-auto" name="enews" type="hidden" value="DelMsg_all">              </td>
