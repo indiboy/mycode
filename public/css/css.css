@@ -1,0 +1,157 @@
+body {
+	background: #ffffff;
+}
+
+.pagination span {
+    color: #333;
+    padding: 8px 12px;
+    line-height: 18px;
+    display: block;
+    transition: all 1s cubic-bezier(0.175,0.885,0.32,1) 0s;
+}
+
+.doc-header {}
+
+.doc-header.fixed-top {
+	background-color: #fff;
+	border-bottom: solid 1px #ddd;
+	z-index: 2;
+	-webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, .175);
+	box-shadow: 0 3px 6px rgba(0, 0, 0, .175);
+}
+
+#article-content {
+	font-size: 16px;
+	line-height: 28px;
+}
+
+#article-content p {
+	margin-bottom: 15px;
+	text-indent: 2em;
+}
+
+#article-content img {
+	max-height: 100%;
+}
+
+
+.lefter {
+	padding-right: 30px;
+}
+
+.imgicon {
+	padding: 1px;
+}
+
+.content-sns-img {
+	margin: 5px;
+	width: 375px;
+}
+
+.content-sns-text {
+	padding: 5px 0;
+}
+
+.home-index-lists .panel {
+	margin-bottom: 10px;
+}
+
+.home-index-right .panel {
+	margin-top: 10px;
+}
+
+.related-user ul li {
+	border-bottom: #CCCCCC 1px dashed;
+	margin: 5px;
+	padding: 5px;
+}
+
+.related-user ul li:last-child {
+	border-bottom: #FFFFFF 1px solid;
+	margin: 5px;
+	padding: 5px;
+}
+
+.home-nav .layui-nav {
+	background: #e33;
+}
+
+.home-nav .layui-nav .layui-nav-item {
+	line-height: 45px;
+}
+
+.home-nav .layui-nav .layui-this:after,
+.layui-nav-bar {
+	height: 2px;
+	background-color: #ffffff;
+}
+
+#back-to-top {
+	display: block;
+	width: 45px;
+	height: 45px;
+	position: fixed;
+	right: 50px;
+	bottom: 70px;
+	border: 1px solid #bebebe;
+	text-indent: -9999em;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	background: url(/public/img/back_to_top.png) no-repeat center center;
+}
+
+#back-to-top:hover {
+	background: url(/public/img/back_to_top_hover.png) no-repeat center center;
+}
+
+#footer {
+	background: #344a5d;
+	background-color: #344a5d;
+}
+
+.title {
+	font-size: 20px;
+}
+
+#footer a {
+	color: #6a8093;
+}
+
+#footer a:hover {
+	color: #fff;
+}
+
+#footer .x3 {
+	background: url(../images/bg_footer.gif) repeat-y right;
+	color: #6a8093;
+	min-height: 140px;
+}
+
+#footer .x3:last-child {
+	background: none;
+}
+
+#footer .info {
+	float: left;
+	color: #ccc;
+	font-size: 18px;
+	line-height: 26px;
+	border-left: 1px solid #757d85;
+	padding-left: 20px;
+	margin-top: 32px;
+}
+
+#footer .info .call {
+	font-size: 24px;
+	display: block;
+}
+
+.copyright {
+	background-color: #0b3346;
+	color: rgba(255, 255, 255, 0.6);
+}
+
+.copyright a {
+	color: rgba(255, 255, 255, 0.6);
+}

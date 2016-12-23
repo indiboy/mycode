@@ -1,0 +1,41 @@
+{extend name="main" /}
+{block name="body"}
+<div class="layout">
+    <!--tab标签-->
+    <div class="layui-tab layui-tab-brief">
+        <div class="padding border-bottom">
+			<div class="button-toolbar">
+				<div class="button-group">
+            		<a class="button border-green icon-home" href="{:url('index/enewsmembergroup/index')}"> 权限组</a>
+				</div>
+			</div>
+		</div>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+                <table class="layui-table">
+                    <thead>
+                    <tr>
+                        <th style="width: 30px;">ID</th>
+                        <th>名称</th>
+                        <th>状态</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {foreach name="enewsmembergroup_list" item="vo"}
+                    <tr>
+                        <td>{$vo.groupid}</td>
+                        <td>{$vo.groupname}</td>
+                        <td>{php}echo $vo['checked']==1 ? '禁用' : '启用';{/php}</td>
+                        <td>
+                            <a href="{:url('index/enewsmembergroup/auth',['groupid'=>$vo['groupid']])}" class="layui-btn layui-btn-mini">授权</a>
+                        </td>
+                    </tr>
+                    {/foreach}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
