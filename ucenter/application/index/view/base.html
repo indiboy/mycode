@@ -88,7 +88,7 @@
 									{if condition="($v.ishttp==0)"}
 									<a class="tab-open" href="javascript:;" data-url="{:url($v.name)}" data-name="{$v.title}"> {$v.title}</a>
 									{else /}
-									<a class="tab-open" href="javascript:;" data-url="{$v.name}" data-name="{$v.title}"> {$v.title}</a>
+									<a class="tab-open" href="javascript:;" data-url="{$Think.config.ecms_path}{$v.name}" data-name="{$v.title}"> {$v.title}</a>
 									{/if}
 								</dd>
 							</dl>

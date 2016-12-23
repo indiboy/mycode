@@ -10,7 +10,7 @@ $url="<a href=../../../>首页</a>&nbsp;>&nbsp;<a href=../cp/>会员中心</a>&n
 require(ECMS_PATH.'e/template/incfile/header.php');
 ?>
 <br> 
-<table width="50%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+<table width="50%" border="0" align="center" cellpadding="3" cellspacing="1" class="table table-bordered table-striped">
   <tr class="header"> 
     <td height="25" colspan="2">帐号状态</td>
   </tr>

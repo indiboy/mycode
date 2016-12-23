@@ -14,18 +14,18 @@ require(ECMS_PATH.'e/template/incfile/header.php');
   <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
     <tr> 
       <td>订单号为: 
-        <input name="keyboard" type="text" id="keyboard" value="<?=$keyboard?>">
+        <input class="input input-auto" name="keyboard" type="text" id="keyboard" value="<?=$keyboard?>">
         时间从 
-        <input name="starttime" type="text" id="starttime2" value="<?=$starttime?>" size="12" onclick="setday(this)">
+        <input class="input input-auto" name="starttime" type="text" id="starttime2" value="<?=$starttime?>" size="12" onclick="setday(this)">
         到 
-        <input name="endtime" type="text" id="endtime2" value="<?=$endtime?>" size="12" onclick="setday(this)">
+        <input class="input input-auto" name="endtime" type="text" id="endtime2" value="<?=$endtime?>" size="12" onclick="setday(this)">
         止的订单 
-        <input type="submit" name="Submit6" value="搜索"> <input name="sear" type="hidden" id="sear2" value="1"> 
+        <input class="button" type="submit" name="Submit6" value="搜索"> <input class="input input-auto" name="sear" type="hidden" id="sear2" value="1">
       </td>
     </tr>
   </table>
 </form>
-<table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class=tableborder>
+<table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class=table table-bordered table-striped>
     <tr class=header> 
       <td width="5%" height="23"> <div align="center">序号</div></td>
       <td width="17%"><div align="center">编号(点击查看)</div></td>

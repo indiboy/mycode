@@ -10,9 +10,9 @@ $url="<a href=../../../>首页</a>&nbsp;>&nbsp;<a href=../cp/>会员中心</a>&n
 require(ECMS_PATH.'e/template/incfile/header.php');
 ?>
 <br>
-<table width="500" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+<table width="500" border="0" align="center" cellpadding="3" cellspacing="1" class="table table-bordered table-striped">
   <form name="ChRegForm" method="GET" action="index.php">
-  <input name="tobind" type="hidden" id="tobind" value="<?=$tobind?>">
+  <input class="input input-auto" name="tobind" type="hidden" id="tobind" value="<?=$tobind?>">
     <tr class="header"> 
       <td height="25"><div align="center">选择注册会员类型<?=$tobind?' (绑定账号)':''?></div></td>
     </tr>
@@ -29,7 +29,7 @@ require(ECMS_PATH.'e/template/incfile/header.php');
 		?>
           <tr>
             <td height="23">
-			<input type="radio" name="groupid" value="<?=$r[groupid]?>"<?=$checked?>>
+			<input class="input input-auto" type="radio" name="groupid" value="<?=$r[groupid]?>"<?=$checked?>>
               <?=$r[groupname]?>
             </td>
           </tr>
@@ -39,7 +39,7 @@ require(ECMS_PATH.'e/template/incfile/header.php');
         </table></td>
     </tr>
     <tr bgcolor="#FFFFFF"> 
-      <td height="25"> &nbsp;<input type="submit" name="button" value="下一步"></td>
+      <td height="25"> &nbsp;<input class="button" type="submit" name="button" value="下一步"></td>
     </tr>
   </form>
 </table>

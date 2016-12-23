@@ -20,10 +20,10 @@ function CheckAll(form)
     }
   }
 </script>
-        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="table table-bordered table-striped">
 		<form name="feedbackform" method="post" action="index.php" onsubmit="return confirm('确认要删除?');">
 		<tr class="header"> 
-		  <td width="6%" height="25"><div align="center"><input type='checkbox' name='chkall' value='on' onClick='CheckAll(this.form)'></div></td>
+		  <td width="6%" height="25"><div align="center"><input class="input input-auto" type='checkbox' name='chkall' value='on' onClick='CheckAll(this.form)'></div></td>
 		  <td width="58%"><div align="center">标题(点击查看)</div></td>
 		  <td width="25%"><div align="center">提交时间</div></td>
 			<td width="11%"><div align="center">删除</div></td>
@@ -42,7 +42,7 @@ function CheckAll(form)
 		?>
         <tr bgcolor="#FFFFFF"> 
 			<td height="25"><div align="center"> 
-			<input name="fid[]" type="checkbox" value="<?=$r[fid]?>">
+			<input class="" name="fid[]" type="checkbox" value="<?=$r[fid]?>">
 			</div></td>
 			<td height="25"><div align="left">
 			<a href="#ecms" onclick="window.open('ShowFeedback.php?fid=<?=$r[fid]?>','','width=650,height=600,scrollbars=yes,top=70,left=100');"><?=$r[title]?></a>&nbsp;(<?=$r['uname']?>)
@@ -61,8 +61,8 @@ function CheckAll(form)
 			<td height="25" colspan="4"> 
 			<?=$returnpage?>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<input type="submit" name="Submit" value="批量删除">
-			<input name="enews" type="hidden" id="enews" value="DelMemberFeedback_All"></td>
+			<input class="button" type="submit" name="Submit" value="批量删除">
+			<input class="input input-auto" name="enews" type="hidden" id="enews" value="DelMemberFeedback_All"></td>
 		  </tr>
 		</form>
         </table>

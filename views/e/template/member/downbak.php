@@ -9,7 +9,7 @@ $public_diyr['pagetitle']='消费记录';
 $url="<a href=../../../>首页</a>&nbsp;>&nbsp;<a href=../cp/>会员中心</a>&nbsp;>&nbsp;消费记录";
 require(ECMS_PATH.'e/template/incfile/header.php');
 ?>
-        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="table table-bordered table-striped">
           <tr class="header"> 
             <td width="55%" height="25"><div align="center">标题</div></td>
             <td width="16%" height="25"><div align="center">扣除点数</div></td>

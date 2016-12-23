@@ -20,14 +20,14 @@ function CheckAll(form)
     }
   }
 </script> 
-        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="table table-bordered table-striped">
             <tr>
               <td width="50%" height="30" bgcolor="#FFFFFF">&nbsp;</td>
               <td width="50%" bgcolor="#FFFFFF"><div align="right">[<a href="AddMsg/?enews=AddMsg">发送消息</a>]&nbsp;&nbsp;</div></td>
             </tr>
         </table>
         <br>
-        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="table table-bordered table-striped">
           <form name="listmsg" method="post" action="../doaction.php" onsubmit="return confirm('确认要删除?');">
             <tr class="header"> 
               <td width="4%" height="23"> <div align="center"></div></td>
@@ -60,7 +60,7 @@ function CheckAll(form)
 			?>
             <tr bgcolor="#FFFFFF"> 
               <td height="25"> <div align="center"> 
-                  <input name="mid[]" type="checkbox" id="mid[]2" value="<?=$r[mid]?>">
+                  <input class="" name="mid[]" type="checkbox" id="mid[]2" value="<?=$r[mid]?>">
                 </div></td>
               <td> <table width="100%" border="0" cellspacing="0" cellpadding="0">
                   <tr> 
@@ -83,10 +83,10 @@ function CheckAll(form)
 			?>
             <tr bgcolor="#FFFFFF"> 
               <td><div align="center"> 
-                  <input type=checkbox name=chkall value=on onclick=CheckAll(this.form)>
+                  <input class="input input-auto" type=checkbox name=chkall value=on onclick=CheckAll(this.form)>
                 </div></td>
-              <td colspan="4"><input type="submit" name="Submit2" value="删除选中"> 
-                <input name="enews" type="hidden" value="DelMsg_all">              </td>
+              <td colspan="4"><input class="button" type="submit" name="Submit2" value="删除选中">
+                <input class="input input-auto" name="enews" type="hidden" value="DelMsg_all">              </td>
             </tr>
             <tr bgcolor="#FFFFFF"> 
               <td><div align="center"></div></td>

@@ -17,7 +17,7 @@ class Menu extends UcenterBase {
     protected function _initialize() {
         parent::_initialize();
         $this->auth_rule_model = new AuthRuleModel();
-        $enewsmember_menu_list = $this->auth_rule_model->order(['sort' => 'DESC', 'id' => 'ASC'])->select();
+        $enewsmember_menu_list = $this->auth_rule_model->order(['sort' => 'ASC', 'id' => 'ASC'])->select();
         $enewsmember_menu_level_list = array2level($enewsmember_menu_list);
 
         $this->assign('enewsmember_menu_level_list', $enewsmember_menu_level_list);

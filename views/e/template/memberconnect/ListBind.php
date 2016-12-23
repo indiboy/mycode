@@ -9,7 +9,7 @@ $public_diyr['pagetitle']='登录绑定';
 $url="<a href=../../>首页</a>&nbsp;>&nbsp;<a href=../member/cp/>会员中心</a>&nbsp;>&nbsp;登录绑定";
 require(ECMS_PATH.'e/template/incfile/header.php');
 ?>
-<table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+<table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="table table-bordered table-striped">
   <tr class="header">
     <td width="36%"><div align="center">平台</div></td>
     <td width="20%" height="25"><div align="center">绑定时间</div></td>

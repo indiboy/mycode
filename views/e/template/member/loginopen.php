@@ -12,26 +12,26 @@ if(!defined('InEmpireCMS'))
 </head>
 
 <body>
-  <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+  <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="table table-bordered table-striped">
   <form name="form1" method="post" action="../doaction.php">
-    <input type=hidden name=ecmsfrom value="<?=ehtmlspecialchars($_GET['from'])?>">
-    <input type=hidden name=prtype value="<?=ehtmlspecialchars($_GET['prt'])?>">
-    <input type=hidden name=enews value=login>
+    <input class="input input-auto" type=hidden name=ecmsfrom value="<?=ehtmlspecialchars($_GET['from'])?>">
+    <input class="input input-auto" type=hidden name=prtype value="<?=ehtmlspecialchars($_GET['prt'])?>">
+    <input class="input input-auto" type=hidden name=enews value=login>
     <tr class="header"> 
       <td height="25" colspan="2"><div align="center">会员登陆</div></td>
     </tr>
     <tr bgcolor="#FFFFFF"> 
       <td width="24%" height="25">用户名：</td>
-      <td width="76%" height="25"><input name="username" type="text" id="username"></td>
+      <td width="76%" height="25"><input class="input input-auto" name="username" type="text" id="username"></td>
     </tr>
     <tr bgcolor="#FFFFFF"> 
       <td height="25">密码：</td>
-      <td height="25"><input name="password" type="password" id="password"></td>
+      <td height="25"><input class="input input-auto" name="password" type="password" id="password"></td>
     </tr>
 	 <tr bgcolor="#FFFFFF">
       <td height="25">保存：</td>
       <td height="25"> 
-        <select name="lifetime">
+        <select class="input input-auto" name="lifetime">
           <option value="0">不保存</option>
 		  <option value="3600">一小时</option>
 		  <option value="86400">一天</option>
@@ -46,7 +46,7 @@ if(!defined('InEmpireCMS'))
 	?>
     <tr bgcolor="#FFFFFF"> 
       <td height="25">验证码：</td>
-      <td height="25"><input name="key" type="text" id="key" size="6">
+      <td height="25"><input class="input input-auto" name="key" type="text" id="key" size="6">
         <img src="../../ShowKey/?v=login" name="loginKeyImg" id="loginKeyImg" onclick="loginKeyImg.src='../../ShowKey/?v=login&t='+Math.random()" title="看不清楚,点击刷新"></td>
     </tr>
     <?php
@@ -54,7 +54,7 @@ if(!defined('InEmpireCMS'))
 	?>
     <tr bgcolor="#FFFFFF"> 
       <td height="25">&nbsp;</td>
-      <td height="25"><input type="submit" name="Submit" value="登陆"> <input type="button" name="button" value="注册" onclick="window.open('../register/');"></td>
+      <td height="25"><input class="button" type="submit" name="Submit" value="登陆"> <input class="input input-auto" type="button" name="button" value="注册" onclick="window.open('../register/');"></td>
     </tr>
 	</form>
   </table>

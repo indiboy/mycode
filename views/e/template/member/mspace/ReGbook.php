@@ -14,11 +14,11 @@ if(!defined('InEmpireCMS'))
 
 <body>
 <form name="regbook" method="post" action="index.php">
-  <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+  <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="table table-bordered table-striped">
     <tr class=header> 
       <td height="25" colspan="2">回复/修改留言
-        <input name="enews" type="hidden" id="enews" value="ReMemberGbook">
-        <input name="gid" type="hidden" id="gid" value="<?=$gid?>">
+        <input class="input input-auto" name="enews" type="hidden" id="enews" value="ReMemberGbook">
+        <input class="input input-auto" name="gid" type="hidden" id="gid" value="<?=$gid?>">
         </td>
     </tr>
     <tr bgcolor="#FFFFFF"> 
@@ -43,12 +43,12 @@ if(!defined('InEmpireCMS'))
     </tr>
     <tr bgcolor="#FFFFFF"> 
       <td height="25"><strong>回复内容:</strong></td>
-      <td height="25"><textarea name="retext" cols="60" rows="9" id="retext"><?=$r[retext]?></textarea> </td>
+      <td height="25"><textarea class="input input-auto" name="retext" cols="60" rows="9" id="retext"><?=$r[retext]?></textarea> </td>
     </tr>
     <tr bgcolor="#FFFFFF"> 
       <td height="25">&nbsp;</td>
-      <td height="25"><input type="submit" name="Submit" value="提交">
-        <input type="reset" name="Submit2" value="重置"></td>
+      <td height="25"><input class="button" type="submit" name="Submit" value="提交">
+        <input class="button" type="reset" name="Submit2" value="重置"></td>
     </tr>
     <tr bgcolor="#FFFFFF"> 
       <td height="25" colspan="2"><div align="center">[ <a href="javascript:window.close();">关 

@@ -25,21 +25,21 @@ function CheckChangeClass()
           <td>你好，<b><?=$musername?></b></td>
         </tr>
       </table>
-      <table width="500" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+      <table width="500" border="0" align="center" cellpadding="3" cellspacing="1" class="table table-bordered table-striped">
         <form action="AddInfo.php" method="get" name="changeclass" id="changeclass" onsubmit="return CheckChangeClass();">
           <tr class="header"> 
             <td height="23"><strong>请选择要增加信息的栏目 
-                <input name="mid" type="hidden" id="mid" value="<?=$mid?>">
-              <input name="enews" type="hidden" id="enews" value="MAddInfo">
+                <input class="input input-auto" name="mid" type="hidden" id="mid" value="<?=$mid?>">
+              <input class="input input-auto" name="enews" type="hidden" id="enews" value="MAddInfo">
               </strong></td>
           </tr>
           <tr bgcolor="#FFFFFF"> 
-            <td height="32"> <select name=classid size="22" style="width:300px">
+            <td height="32"> <select class="input input-auto" name=classid size="22" style="width:300px">
                 <script src="<?=$classjs?>"></script>
               </select> </td>
           </tr>
           <tr bgcolor="#FFFFFF"> 
-            <td><input type="submit" name="Submit" value="添加信息"> <font color="#666666">(请选择终极栏目[蓝色条])</font></td>
+            <td><input class="button" type="submit" name="Submit" value="添加信息"> <font color="#666666">(请选择终极栏目[蓝色条])</font></td>
           </tr>
         </form>
       </table>

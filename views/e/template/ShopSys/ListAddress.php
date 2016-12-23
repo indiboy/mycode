@@ -9,14 +9,14 @@ $public_diyr['pagetitle']='配送地址列表';
 $url="<a href=../../../>首页</a>&nbsp;>&nbsp;<a href=../../member/cp/>会员中心</a>&nbsp;>&nbsp;配送地址列表&nbsp;&nbsp;(<a href='AddAddress.php?enews=AddAddress'>增加配送地址</a>)";
 require(ECMS_PATH.'e/template/incfile/header.php');
 ?>
-<table width="600" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+<table width="600" border="0" align="center" cellpadding="3" cellspacing="1" class="table table-bordered table-striped">
   <tr>
     <td width="50%" height="30" bgcolor="#FFFFFF">&nbsp;</td>
     <td width="50%" bgcolor="#FFFFFF"><div align="right">[<a href="AddAddress.php?enews=AddAddress">增加配送地址</a>]&nbsp;&nbsp;</div></td>
   </tr>
 </table>
 <br>
-<table width="600" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+<table width="600" border="0" align="center" cellpadding="3" cellspacing="1" class="table table-bordered table-striped">
     <tr class="header">
       <td width="65%" height="23"><div align="center">地址名称</div></td>
       <td width="10%"><div align="center">默认</div></td>

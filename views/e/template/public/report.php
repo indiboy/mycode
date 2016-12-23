@@ -10,8 +10,8 @@ $url="<a href=../../../>首页</a>&nbsp;>&nbsp;<a href='".$titleurl."'>".$r[titl
 require(ECMS_PATH.'e/template/incfile/header.php');
 ?>
 <form name="form1" method="post" action="../../enews/index.php">
-  <table width="600" border="0" align="center" cellpadding="3" cellspacing="1"class=tableborder>
-  <input type="hidden" name="cid" value="<?=$cid?>">
+  <table width="600" border="0" align="center" cellpadding="3" cellspacing="1"class=table table-bordered table-striped>
+  <input class="input input-auto" type="hidden" name="cid" value="<?=$cid?>">
     <tr class=header> 
       <td height="23" colspan="2">提交错误报告</td>
     </tr>
@@ -21,19 +21,19 @@ require(ECMS_PATH.'e/template/incfile/header.php');
     </tr>
     <tr bgcolor="#FFFFFF"> 
       <td height="23"><div align="left">您的邮箱:</div></td>
-      <td height="23"><input name="email" type="text" id="email">
+      <td height="23"><input class="input input-auto" name="email" type="text" id="email">
         （方便回复您）</td>
     </tr>
     <tr bgcolor="#FFFFFF"> 
       <td height="23"><div align="left">报告内容(*):</div></td>
-      <td height="23"><textarea name="errortext" cols="60" rows="12" id="name4"></textarea></td>
+      <td height="23"><textarea class="input input-auto" name="errortext" cols="60" rows="12" id="name4"></textarea></td>
     </tr>
     <tr bgcolor="#FFFFFF"> 
       <td height="23">&nbsp;</td>
-      <td height="23"><input type="submit" name="Submit" value="提交"> <input type="reset" name="Submit2" value="重置"> 
-        <input name="enews" type="hidden" id="enews" value="AddError">
-        <input name="id" type="hidden" id="id" value="<?=$id?>">
-        <input name="classid" type="hidden" id="classid" value="<?=$classid?>"></td>
+      <td height="23"><input class="button" type="submit" name="Submit" value="提交"> <input class="button" type="reset" name="Submit2" value="重置">
+        <input class="input input-auto" name="enews" type="hidden" id="enews" value="AddError">
+        <input class="input input-auto" name="id" type="hidden" id="id" value="<?=$id?>">
+        <input class="input input-auto" name="classid" type="hidden" id="classid" value="<?=$classid?>"></td>
     </tr>
   </table>
 </form>

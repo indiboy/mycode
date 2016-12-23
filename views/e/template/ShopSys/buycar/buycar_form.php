@@ -16,7 +16,7 @@ $bcount=count($buycarr);
 ?>
 <table width='100%' border=0 align=center cellpadding=3 cellspacing=1>
   <form name=form1 method=post action='../doaction.php'>
-  <input type=hidden name=enews value=EditBuycar>
+  <input class="input input-auto" type=hidden name=enews value=EditBuycar>
     <tr class='header'> 
       <td width='16%' height=23> <div align=center>图片</div></td>
       <td width='29%'> <div align=center>商品名称</div></td>
@@ -78,11 +78,11 @@ for($i=0;$i<$bcount-1;$i++)
 	<td align="center"><a href="<?=$titleurl?>" target="_blank"><?=$productr[title]?></a><?=$addatt?' - '.$addatt:''?></td>
 	<td align="right">￥<?=$productr[tprice]?></td>
 	<td align="right"><b>￥<?=$productr[price]?></b></td>
-	<td align="center"><input type="text" name="num[]" value="<?=$pnum?>" size="6"></td>
+	<td align="center"><input class="input input-auto" type="text" name="num[]" value="<?=$pnum?>" size="6"></td>
 	<td align="right">￥<?=$thistotal?></td>
-	<td align="center"><input type="checkbox" name="del[]" value="<?=$productid.'|'.$addatt?>"></td>
-	<input type="hidden" name="productid[]" value="<?=$productid?>">
-	<input type="hidden" name="addatt[]" value="<?=$addatt?>">
+	<td align="center"><input class="" type="checkbox" name="del[]" value="<?=$productid.'|'.$addatt?>"></td>
+	<input class="input input-auto" type="hidden" name="productid[]" value="<?=$productid?>">
+	<input class="input input-auto" type="hidden" name="addatt[]" value="<?=$addatt?>">
 </tr>
 <?php
 }
@@ -110,7 +110,7 @@ else
 <tr> 
     <td colspan="7" height="25"><div align="right">
 		<a href="../doaction.php?enews=ClearBuycar"><img src="../../data/images/shop/clearbuycar.gif" width=92 height=23 border=0></a>&nbsp;&nbsp;
-          <input name="imageField" type="image" src="../../data/images/shop/editbuycar.gif" width=135 height=23 border=0>
+          <input class="input input-auto" name="imageField" type="image" src="../../data/images/shop/editbuycar.gif" width=135 height=23 border=0>
           &nbsp;&nbsp;
 		<a href="javascript:window.close();"><img src="../../data/images/shop/buynext.gif" width=87 height=23 border=0></a>
 		&nbsp;&nbsp;

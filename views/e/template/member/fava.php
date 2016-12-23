@@ -9,11 +9,11 @@ $public_diyr['pagetitle']='收藏夹';
 $url="<a href=../../../>首页</a>&nbsp;>&nbsp;<a href=../cp/>会员中心</a>&nbsp;>&nbsp;收藏夹";
 require(ECMS_PATH.'e/template/incfile/header.php');
 ?>
-      <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+      <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="table table-bordered table-striped">
           <form name="form1" method="post" action="">
             <tr> 
               <td width="50%" height="30" bgcolor="#FFFFFF">选择分类: 
-                <select name="cid" id="select" onchange=window.location='../fava/?cid='+this.options[this.selectedIndex].value>
+                <select class="input input-auto" name="cid" id="select" onchange=window.location='../fava/?cid='+this.options[this.selectedIndex].value>
                   <option value="0">显示全部</option>
                   <?=$select?>
                 </select></td>
@@ -22,9 +22,9 @@ require(ECMS_PATH.'e/template/incfile/header.php');
           </form>
 </table>
         <br>
-        <table width="100%" border="0" cellpadding="3" cellspacing="1" class="tableborder">
+        <table width="100%" border="0" cellpadding="3" cellspacing="1" class="table table-bordered table-striped">
           <form name=favaform method=post action="../doaction.php" onsubmit="return confirm('确认要操作?');">
-            <input type=hidden value=DelFava_All name=enews>
+            <input class="input input-auto" type=hidden value=DelFava_All name=enews>
             <tr class="header"> 
               <td width="4%" height="25"><div align="center"></div></td>
               <td width="57%"><div align="center">标题</div></td>
@@ -58,7 +58,7 @@ require(ECMS_PATH.'e/template/incfile/header.php');
                   <?=$fr[favatime]?>
                 </div></td>
               <td> <div align="center"> 
-                  <input name="favaid[]" type="checkbox" id="favaid[]2" value="<?=$fr[favaid]?>">
+                  <input class="" name="favaid[]" type="checkbox" id="favaid[]2" value="<?=$fr[favaid]?>">
                 </div></td>
             </tr>
             <?php
@@ -67,11 +67,11 @@ require(ECMS_PATH.'e/template/incfile/header.php');
             <tr bgcolor="#FFFFFF"> 
               <td height="25" colspan="5"> &nbsp;&nbsp;&nbsp; 
                 <?=$returnpage?>
-                &nbsp;&nbsp; <select name="cid">
+                &nbsp;&nbsp; <select class="input input-auto" name="cid">
                   <option value="0">请选择要转移的目标分类</option>
                   <?=$select?>
-                </select> <input type="submit" name="Submit" value="转移选中" onclick="document.favaform.enews.value='MoveFava_All'"> 
-              &nbsp;&nbsp; <input type="submit" name="Submit" value="删除选中" onclick="document.favaform.enews.value='DelFava_All'"></td>
+                </select> <input class="button" type="submit" name="Submit" value="转移选中" onclick="document.favaform.enews.value='MoveFava_All'">
+              &nbsp;&nbsp; <input class="button" type="submit" name="Submit" value="删除选中" onclick="document.favaform.enews.value='DelFava_All'"></td>
             </tr>
           </form>
         </table>

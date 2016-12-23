@@ -56,7 +56,7 @@ $public_diyr['pagetitle']='查看 '.$username.' 的会员资料';
 $url="<a href='../../../'>首页</a>&nbsp;>&nbsp;<a href='../cp/'>会员中心</a>&nbsp;>&nbsp;查看会员资料";
 require(ECMS_PATH.'e/template/incfile/header.php');
 ?>
-<table width='100%' border='0' align='center' cellpadding='3' cellspacing='1' class="tableborder">
+<table width='100%' border='0' align='center' cellpadding='3' cellspacing='1' class="table table-bordered table-striped">
   <tr class="header"> 
     <td height="25" colspan="2">查看 <?=$username?> 的会员资料</td>
   </tr>
@@ -97,7 +97,7 @@ require(ECMS_PATH.'e/template/incfile/header.php');
   <?=$memberinfo?>
   <tr> 
     <td>&nbsp;</td>
-    <td height="25"> <input type='button' name='Submit2' value='返回' onclick='history.go(-1)'></td>
+    <td height="25"> <input class="input input-auto" type='button' name='Submit2' value='返回' onclick='history.go(-1)'></td>
   </tr>
 </table>
 <?php

@@ -10,15 +10,15 @@ $url="<a href=../../../../>首页</a>&nbsp;>&nbsp;<a href=../../cp/>会员中心
 require(ECMS_PATH.'e/template/incfile/header.php');
 ?>
 <br>
-        <table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+        <table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" class="table table-bordered table-striped">
           <form name="form1" method="POST" action="../../doaction.php">
             <tr class="header"> 
               <td height="25"><div align="center"> 
-                  <input name="enews" type="hidden" id="enews" value="AddFava">
+                  <input class="input input-auto" name="enews" type="hidden" id="enews" value="AddFava">
                   增加收藏夹 
-                  <input name="from" type="hidden" id="from2" value="<?=$from?>">
-                  <input name="classid" type="hidden" id="classid2" value="<?=$classid?>">
-                  <input name="id" type="hidden" id="id2" value="<?=$id?>">
+                  <input class="input input-auto" name="from" type="hidden" id="from2" value="<?=$from?>">
+                  <input class="input input-auto" name="classid" type="hidden" id="classid2" value="<?=$classid?>">
+                  <input class="input input-auto" name="id" type="hidden" id="id2" value="<?=$id?>">
                   [<a href="../FavaClass/" target="_blank">增加收藏分类</a>] </div></td>
             </tr>
             <tr> 
@@ -26,7 +26,7 @@ require(ECMS_PATH.'e/template/incfile/header.php');
             </tr>
             <tr> 
               <td height="25" bgcolor="#FFFFFF"><div align="center">选择收藏分类: 
-                  <select name="cid" id="select">
+                  <select class="input input-auto" name="cid" id="select">
                     <option value="0">不设置</option>
                     <?=$select?>
                   </select>
@@ -34,9 +34,9 @@ require(ECMS_PATH.'e/template/incfile/header.php');
             </tr>
             <tr> 
               <td height="25" bgcolor="#FFFFFF"><div align="center"> 
-                  <input type="submit" name="Submit" value="收藏">
+                  <input class="button" type="submit" name="Submit" value="收藏">
                   &nbsp;&nbsp; 
-                  <input type="button" name="Submit2" value="返回" onclick="javascript:history.go(-1)">
+                  <input class="input input-auto" type="button" name="Submit2" value="返回" onclick="javascript:history.go(-1)">
                 </div></td>
             </tr>
           </form>

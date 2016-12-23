@@ -47,23 +47,23 @@ else
 </head>
 
 <body>
-<table width="430" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+<table width="430" border="0" align="center" cellpadding="3" cellspacing="1" class="table table-bordered table-striped">
   <form action="ecms.php" method="post" enctype="multipart/form-data" name="form1">
-    <input type=hidden name=classid value="<?=$classid?>">
-	<input type=hidden name=infoid value="<?=$infoid?>">
-    <input type=hidden name=enews value="<?=$enews?>">
-    <input type=hidden name=type value="<?=$type?>">
-	<input type=hidden name=ecms value="<?=$ecms?>">
-    <input type=hidden name=filepass value="<?=$filepass?>">
-	 <input type=hidden name=userid value="<?=$userid?>">
-	 <input type=hidden name=username value="<?=$username?>">
-	 <input type=hidden name=rnd value="<?=$rnd?>">
+    <input class="input input-auto" type=hidden name=classid value="<?=$classid?>">
+	<input class="input input-auto" type=hidden name=infoid value="<?=$infoid?>">
+    <input class="input input-auto" type=hidden name=enews value="<?=$enews?>">
+    <input class="input input-auto" type=hidden name=type value="<?=$type?>">
+	<input class="input input-auto" type=hidden name=ecms value="<?=$ecms?>">
+    <input class="input input-auto" type=hidden name=filepass value="<?=$filepass?>">
+	 <input class="input input-auto" type=hidden name=userid value="<?=$userid?>">
+	 <input class="input input-auto" type=hidden name=username value="<?=$username?>">
+	 <input class="input input-auto" type=hidden name=rnd value="<?=$rnd?>">
     <tr class="header"> 
       <td height="23"><strong><font color="#FFFFFF"><?=$word?></font></strong></td>
     </tr>
     <tr bgcolor="#FFFFFF"> 
       <td height="32">本地上传： 
-        <input type="file" name="file"> <input type="submit" name="Submit" value="上传">
+        <input class="input input-auto" type="file" name="file"> <input class="button" type="submit" name="Submit" value="上传">
       </td>
     </tr>
     <tr bgcolor="#FFFFFF">

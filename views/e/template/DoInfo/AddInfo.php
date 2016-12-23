@@ -31,13 +31,13 @@ function FieldChangeColor(obj){
 </script>
 <script src="../data/html/postinfo.js"></script>
 <form name="add" method="POST" enctype="multipart/form-data" action="ecms.php" onsubmit="return EmpireCMSQInfoPostFun(document.add,'<?=$mid?>');">
-  <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+  <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="table table-bordered table-striped">
           <tr class="header"> 
             <td height="25" colspan="2"> 
               <?=$word?>
-              <input type=hidden value="<?=$enews?>" name=enews> <input type=hidden value="<?=$classid?>" name=classid> 
-              <input name=id type=hidden id="id" value="<?=$id?>"> <input type=hidden value="<?=$filepass?>" name=filepass> 
-              <input name=mid type=hidden id="mid" value="<?=$mid?>"></td>
+              <input class="input input-auto" type=hidden value="<?=$enews?>" name=enews> <input class="input input-auto" type=hidden value="<?=$classid?>" name=classid>
+              <input class="input input-auto" name=id type=hidden id="id" value="<?=$id?>"> <input class="input input-auto" type=hidden value="<?=$filepass?>" name=filepass>
+              <input class="input input-auto" name=mid type=hidden id="mid" value="<?=$mid?>"></td>
           </tr>
           <tr bgcolor="#FFFFFF">
             <td>提交者</td>
@@ -54,11 +54,11 @@ function FieldChangeColor(obj){
   <?php
   @include($modfile);
   ?>
-  <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+  <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="table table-bordered table-striped">
   	<?=$showkey?>
     <tr class="header"> 
       <td width="16%">&nbsp;</td>
-      <td><input type="submit" name="addnews" value="提交"> <input type="reset" name="Submit2" value="重置"></td>
+      <td><input class="button" type="submit" name="addnews" value="提交"> <input class="button" type="reset" name="Submit2" value="重置"></td>
     </tr>
   </table>
 </form>

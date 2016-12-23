@@ -9,7 +9,7 @@ $public_diyr['pagetitle']='查看消息';
 $url="<a href=../../../../>首页</a>&nbsp;>&nbsp;<a href=../../cp/>会员中心</a>&nbsp;>&nbsp;<a href=../../msg/>消息列表</a>&nbsp;>&nbsp;查看消息";
 require(ECMS_PATH.'e/template/incfile/header.php');
 ?>
-        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+        <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="table table-bordered table-striped">
           <form name="form1" method="post" action="../../doaction.php">
             <tr class="header"> 
               <td height="23" colspan="2">

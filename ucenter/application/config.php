@@ -271,6 +271,9 @@ return [
         'reset'    => true
     ],
 
+    //帝国网站管理系统(EmpireCMS)路径设置
+    'ecms_path'       => '/views',
+
     //分页配置
     'paginate'               => [
         'type'      => 'bootstrap',

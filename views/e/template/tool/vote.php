@@ -13,7 +13,7 @@ if(!defined('InEmpireCMS'))
 <link href="../../data/images/qcss.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<table width="100%" border="0" cellpadding="3" cellspacing="1" class="tableborder">
+<table width="100%" border="0" cellpadding="3" cellspacing="1" class="table table-bordered table-striped">
   <tr class="header">
     <td height="25">标题:<?=$r[title]?>&nbsp;(<?=$voteclass?>)</td>
   </tr>
@@ -59,6 +59,6 @@ for($i=0;$i<count($r_r);$i++)
 <br>
 <br>
 <br>
-<center><input type=button name=button value=关闭 onclick="self.window.close();"></center>
+<center><input class="input input-auto" type=button name=button value=关闭 onclick="self.window.close();"></center>
 </body>
 </html>

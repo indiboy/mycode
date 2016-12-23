@@ -26,7 +26,7 @@ function CheckAll(form)
 		while($r=$empire->fetch($sql))
 		{
 			$i++;
-			$bgcolor=" class='tableborder'";
+			$bgcolor=" class='table table-bordered table-striped'";
 			if($i%2==0)
 			{
 				$bgcolor=" bgcolor='#ffffff'";
@@ -49,7 +49,7 @@ function CheckAll(form)
 			<table width="100%" border="0" cellspacing="1" cellpadding="3"<?=$bgcolor?>>
                 <tr> 
                   <td width="5%"><div align="center"> 
-                      <input name="gid[]" type="checkbox" id="gid[]" value="<?=$r[gid]?>">
+                      <input class="" name="gid[]" type="checkbox" id="gid[]" value="<?=$r[gid]?>">
                     </div></td>
                   <td width="78%">
                     <?=$gbuname?>                  </td>
@@ -87,10 +87,10 @@ function CheckAll(form)
             <td height="23"> 
               <table width="100%" border="0" cellspacing="1" cellpadding="3">
                 <tr>
-                  <td width="5%"><div align="center"><input type='checkbox' name='chkall' value='on' onClick='CheckAll(this.form)'></div></td>
+                  <td width="5%"><div align="center"><input class="input input-auto" type='checkbox' name='chkall' value='on' onClick='CheckAll(this.form)'></div></td>
                   <td width="95%">
-                    <?=$returnpage?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='submit' name='submit' value='批量删除'>
-                    <input name="enews" type="hidden" id="enews" value="DelMemberGbook_All"> </td>
+                    <?=$returnpage?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="input input-auto" type='submit' name='submit' value='批量删除'>
+                    <input class="input input-auto" name="enews" type="hidden" id="enews" value="DelMemberGbook_All"> </td>
                 </tr>
               </table></td>
           </tr>

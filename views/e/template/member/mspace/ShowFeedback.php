@@ -13,7 +13,7 @@ if(!defined('InEmpireCMS'))
 </head>
 
 <body>
-<table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class=tableborder style='word-break:break-all'>
+<table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class=table table-bordered table-striped style='word-break:break-all'>
   <tr class=header> 
     <td height="25" colspan="2">标题：<?=$r[title]?></td>
   </tr>

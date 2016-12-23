@@ -9,7 +9,7 @@ $public_diyr['pagetitle']='会员中心';
 $url="<a href=../../../>首页</a>&nbsp;>&nbsp;<a href=../cp/>会员中心</a>";
 require(ECMS_PATH.'e/template/incfile/header.php');
 ?>
-<table width="100%" border="0" cellspacing="1" cellpadding="3" class="tableborder">
+<table width="100%" border="0" cellspacing="1" cellpadding="3" class="table table-bordered table-striped">
   <tr class="header"> 
     <td height="25">会员中心</td>
   </tr>
@@ -28,7 +28,7 @@ require(ECMS_PATH.'e/template/incfile/header.php');
               </tr>
             </table>
           </td>
-          <td> <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+          <td> <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="table table-bordered table-striped">
               <tr bgcolor="#FFFFFF"> 
                 <td width="15%" height="25">用户ID:</td>
                 <td width="85%" height="25"> 

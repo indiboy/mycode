@@ -9,16 +9,16 @@ $public_diyr['pagetitle']='修改资料';
 $url="<a href=../../../>首页</a>&nbsp;>&nbsp;<a href=../cp/>会员中心</a>&nbsp;>&nbsp;修改资料";
 require(ECMS_PATH.'e/template/incfile/header.php');
 ?>
-<table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+<table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="table table-bordered table-striped">
   <tr>
     <td width="50%" height="30" bgcolor="#FFFFFF">&nbsp;</td>
     <td width="50%" bgcolor="#FFFFFF"><div align="right">[<a href="EditSafeInfo.php">密码安全修改</a>]&nbsp;&nbsp;</div></td>
   </tr>
 </table>
 <br>
-<table width='100%' border='0' align='center' cellpadding='3' cellspacing='1' class="tableborder">
+<table width='100%' border='0' align='center' cellpadding='3' cellspacing='1' class="table table-bordered table-striped">
   <form name=userinfoform method=post enctype="multipart/form-data" action=../doaction.php>
-    <input type=hidden name=enews value=EditInfo>
+    <input class="input input-auto" type=hidden name=enews value=EditInfo>
     <tr class="header"> 
       <td height="25" colspan="2">修改基本资料</td>
     </tr>
@@ -37,7 +37,7 @@ require(ECMS_PATH.'e/template/incfile/header.php');
     </tr>
     <tr> 
       <td height="25" bgcolor="#FFFFFF">&nbsp;</td>
-      <td height="25" bgcolor="#FFFFFF"> <input type='submit' name='Submit' value='修改信息'>
+      <td height="25" bgcolor="#FFFFFF"> <input class="input input-auto" type='submit' name='Submit' value='修改信息'>
       </td>
     </tr>
   </form>

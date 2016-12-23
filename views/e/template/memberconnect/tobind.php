@@ -25,8 +25,8 @@ require(ECMS_PATH.'e/template/incfile/header.php');
         </tr>
         <tr>
           <td height="50"><div align="center">
-            <input type="button" name="Submit" value="马上登录绑定" onclick="window.open('<?=$loginurl?>');">
-            <input name="enews" type="hidden" id="enews" value="BindUser">
+            <input class="input input-auto" type="button" name="Submit" value="马上登录绑定" onclick="window.open('<?=$loginurl?>');">
+            <input class="input input-auto" name="enews" type="hidden" id="enews" value="BindUser">
           </div></td>
           </tr>
         <tr>
@@ -44,8 +44,8 @@ require(ECMS_PATH.'e/template/incfile/header.php');
           </tr>
         <tr>
           <td height="50"><div align="center">
-            <input type="button" name="Submit2" value="马上注册绑定" onclick="window.open('<?=$regurl?>');">
-            <input name="enews" type="hidden" id="enews" value="BindReg">
+            <input class="input input-auto" type="button" name="Submit2" value="马上注册绑定" onclick="window.open('<?=$regurl?>');">
+            <input class="input input-auto" name="enews" type="hidden" id="enews" value="BindReg">
           </div></td>
           </tr>
         <tr>

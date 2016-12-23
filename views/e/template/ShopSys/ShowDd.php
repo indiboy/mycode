@@ -197,7 +197,7 @@ function PrintDd()
         <table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" id="pdiv">
           <tr> 
             <td><div align="center">
-                <input type="button" name="Submit" value=" 打 印 " onclick="javascript:PrintDd();">
+                <input class="input input-auto" type="button" name="Submit" value=" 打 印 " onclick="javascript:PrintDd();">
               </div></td>
           </tr>
         </table>

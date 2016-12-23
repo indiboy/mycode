@@ -96,12 +96,12 @@ function ShowPayfs($payfsid,$r,$price){
 
 <body>
 <form action="../doaction.php" method="post" name="myorder" id="myorder">
-<input type=hidden name=enews value=AddDd>
+<input class="input input-auto" type=hidden name=enews value=AddDd>
   <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
     <tr> 
       <td height="27" bgcolor="#FFFFFF"><strong>订单号: 
         <?=$ddno?>
-        <input name="ddno" type="hidden" id="ddno" value="<?=$ddno?>">
+        <input class="input input-auto" name="ddno" type="hidden" id="ddno" value="<?=$ddno?>">
         </strong></td>
     </tr>
     <tr> 
@@ -137,64 +137,64 @@ function ShowPayfs($payfsid,$r,$price){
             <td width="20%">真实姓名:</td>
             <td width="80%"> 
               <?=$r[truename]?>
-              <input name="truename" type="hidden" id="truename" value="<?=$r[truename]?>">            </td>
+              <input class="input input-auto" name="truename" type="hidden" id="truename" value="<?=$r[truename]?>">            </td>
           </tr>
           <tr> 
             <td>OICQ:</td>
             <td> 
               <?=$r[oicq]?>
-              <input name="oicq" type="hidden" id="oicq" value="<?=$r[oicq]?>"></td>
+              <input class="input input-auto" name="oicq" type="hidden" id="oicq" value="<?=$r[oicq]?>"></td>
           </tr>
           <tr> 
             <td>MSN:</td>
             <td> 
               <?=$r[msn]?>
-              <input name="msn" type="hidden" id="msn" value="<?=$r[msn]?>"></td>
+              <input class="input input-auto" name="msn" type="hidden" id="msn" value="<?=$r[msn]?>"></td>
           </tr>
           <tr> 
             <td>固定电话:</td>
             <td> 
               <?=$r[mycall]?>
-              <input name="mycall" type="hidden" id="mycall" value="<?=$r[mycall]?>">            </td>
+              <input class="input input-auto" name="mycall" type="hidden" id="mycall" value="<?=$r[mycall]?>">            </td>
           </tr>
           <tr> 
             <td>移动电话:</td>
             <td> 
               <?=$r[phone]?>
-              <input name="phone" type="hidden" id="phone" value="<?=$r[phone]?>"></td>
+              <input class="input input-auto" name="phone" type="hidden" id="phone" value="<?=$r[phone]?>"></td>
           </tr>
           <tr> 
             <td>联系邮箱:</td>
             <td> 
               <?=$r[email]?>
-              <input name="email" type="hidden" id="email" value="<?=$r[email]?>">            </td>
+              <input class="input input-auto" name="email" type="hidden" id="email" value="<?=$r[email]?>">            </td>
           </tr>
           <tr> 
             <td>联系地址:</td>
             <td> 
               <?=$r[address]?>
-              <input name="address" type="hidden" id="address" value="<?=$r[address]?>" size="60">            </td>
+              <input class="input input-auto" name="address" type="hidden" id="address" value="<?=$r[address]?>" size="60">            </td>
           </tr>
           <tr> 
             <td>邮编:</td>
             <td> 
               <?=$r[zip]?>
-              <input name="zip" type="hidden" id="zip" value="<?=$r[zip]?>" size="8">            </td>
+              <input class="input input-auto" name="zip" type="hidden" id="zip" value="<?=$r[zip]?>" size="8">            </td>
           </tr>
           <tr>
             <td>周边标志建筑:</td>
             <td><?=$r[signbuild]?>
-              <input name="signbuild" type="hidden" id="signbuild" value="<?=$r[signbuild]?>" size="8"></td>
+              <input class="input input-auto" name="signbuild" type="hidden" id="signbuild" value="<?=$r[signbuild]?>" size="8"></td>
           </tr>
           <tr>
             <td>最佳送货时间:</td>
             <td><?=$r[besttime]?>
-              <input name="besttime" type="hidden" id="besttime" value="<?=$r[besttime]?>" size="8"></td>
+              <input class="input input-auto" name="besttime" type="hidden" id="besttime" value="<?=$r[besttime]?>" size="8"></td>
           </tr>
           <tr> 
             <td>备注:</td>
             <td> 
-              <?=nl2br($r[bz])?> <input name="bz" type="hidden" value="<?=$r[bz]?>" size="8">            </td>
+              <?=nl2br($r[bz])?> <input class="input input-auto" name="bz" type="hidden" value="<?=$r[bz]?>" size="8">            </td>
           </tr>
         </table></td>
     </tr>
@@ -204,7 +204,7 @@ function ShowPayfs($payfsid,$r,$price){
 	?>
     <tr> 
       <td height="23" bgcolor="#EFEFEF"><strong>选择配送方式 
-        <input name="psid" type="hidden" id="psid" value="<?=$r[psid]?>" size="8">
+        <input class="input input-auto" name="psid" type="hidden" id="psid" value="<?=$r[psid]?>" size="8">
         </strong></td>
     </tr>
     <tr> 
@@ -222,7 +222,7 @@ function ShowPayfs($payfsid,$r,$price){
 	?>
     <tr> 
       <td height="23" bgcolor="#EFEFEF"><strong>选择支付方式 
-        <input name="payfsid" type="hidden" id="payfsid" value="<?=$r[payfsid]?>" size="8">
+        <input class="input input-auto" name="payfsid" type="hidden" id="payfsid" value="<?=$r[payfsid]?>" size="8">
         </strong></td>
     </tr>
     <tr> 
@@ -256,9 +256,9 @@ function ShowPayfs($payfsid,$r,$price){
           <td><?=$r['fpname']?></td>
         </tr>
       </table>
-	  	<input name="fp" type="hidden" id="fp" value="<?=$r[fp]?>">
-        <input name="fptt" type="hidden" id="fptt" value="<?=$r[fptt]?>">
-		<input name="fpname" type="hidden" id="fpname" value="<?=$r[fpname]?>">	  </td>
+	  	<input class="input input-auto" name="fp" type="hidden" id="fp" value="<?=$r[fp]?>">
+        <input class="input input-auto" name="fptt" type="hidden" id="fptt" value="<?=$r[fptt]?>">
+		<input class="input input-auto" name="fpname" type="hidden" id="fpname" value="<?=$r[fpname]?>">	  </td>
     </tr>
 	<?php
 	}
@@ -270,7 +270,7 @@ function ShowPayfs($payfsid,$r,$price){
       <td height="23" bgcolor="#FFFFFF"><table width="100%" border="0" cellspacing="1" cellpadding="3">
         <tr>
           <td width="20%">优惠码:</td>
-          <td width="80%"><?=$prer[precode]?><input name="precode" type="hidden" id="precode" value="<?=$r[precode]?>"></td>
+          <td width="80%"><?=$prer[precode]?><input class="input input-auto" name="precode" type="hidden" id="precode" value="<?=$r[precode]?>"></td>
         </tr>
         <tr>
           <td>优惠金额:</td>
@@ -296,9 +296,9 @@ function ShowPayfs($payfsid,$r,$price){
     </tr>
     <tr height=27> 
       <td><div align="center"> 
-          <input type="button" name="Submit3" value=" 上一步 " onclick="history.go(-1)">
+          <input class="input input-auto" type="button" name="Submit3" value=" 上一步 " onclick="history.go(-1)">
 		  &nbsp;&nbsp;
-		  <input type="submit" name="Submit" value=" 提交订单 ">
+		  <input class="button" type="submit" name="Submit" value=" 提交订单 ">
         </div></td>
     </tr>
     <tr> 
