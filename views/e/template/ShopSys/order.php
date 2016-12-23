@@ -5,6 +5,11 @@ if(!defined('InEmpireCMS'))
 }
 ?>
 <?php
+$public_diyr['pagetitle']='填写订单';
+$url="<a href=../../../>首页</a>&nbsp;>&nbsp;<a href=../../member/cp/>会员中心</a>&nbsp;>&nbsp;填写订单";
+require(ECMS_PATH.'e/template/incfile/header.php');
+?>
+<?php
 //显示配送方式
 function ShowPs(){
 	global $empire,$dbtbpre;
@@ -16,7 +21,7 @@ function ShowPs(){
 		$str.="<table width='100%' border=0 align=center cellpadding=3 cellspacing=1>
   <tr> 
     <td width='69%' height=23> 
-      <input class="input input-auto" type=radio name=psid value='".$r[pid]."'".$checked."><strong>".$r[pname]."</strong>
+      <input class='input input-auto' type=radio name=psid value='".$r[pid]."'".$checked."><strong>".$r[pname]."</strong>
     </td>
     <td width='31%'><strong>费用:￥".$r[price]."</strong></td>
   </tr>
@@ -87,7 +92,7 @@ function ShowPayfs($pr,$user){
 		}
 		else
 		{}
-		$str.="<tr><td><b><input class="input input-auto" type=radio name=payfsid value='".$r[payid]."'".$checked."".$dis.">".$r[payname]."</b>".$words."</td></tr><tr><td><table width='98%' border=0 align=right cellpadding=3 cellspacing=1><tr><td>".$r[paysay]."</td></tr></table></td></tr>";
+		$str.="<tr><td><b><input class='input input-auto' type=radio name=payfsid value='".$r[payid]."'".$checked."".$dis.">".$r[payname]."</b>".$words."</td></tr><tr><td><table width='98%' border=0 align=right cellpadding=3 cellspacing=1><tr><td>".$r[paysay]."</td></tr></table></td></tr>";
 	}
 	if($str)
 	{
@@ -114,15 +119,6 @@ else
 	$ddno=ShopSys_ReturnDdNo();//订单ID
 }
 ?>
-<!DOCTYPE HTML PUBLIC -//W3C//DTD HTML 4.01 Transitional//EN>
-<html>
-<head>
-<meta http-equiv=Content-Type content=text/html; charset=utf-8>
-<title>填写订单</title>
-<link href=../../data/images/qcss.css rel=stylesheet type=text/css>
-</head>
-
-<body>
 <form action="<?=$formaction?>" method="post" name="myorder" id="myorder"<?=$formconfirm?>>
   <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
   <?php
@@ -345,5 +341,6 @@ else
     </tr>
   </table>
 </form>
-</body>
-</html>
+<?php
+require(ECMS_PATH.'e/template/incfile/footer.php');
+?>
