@@ -15906,3 +15906,157 @@
 [ sql ] [ SQL ] SELECT `id`,`pid`,`title` FROM `phome_auth_rule` [ RunTime:0.020746s ]
 
 ---------------------------------------------------------------
+[ 2016-12-23T22:42:34+08:00 ] 127.0.0.1 127.0.0.1 POST /ucenter/public/index/system/clear.html
+[ log ] api.hzh.com/ucenter/public/index/system/clear.html [运行时间：1.181752s][吞吐率：0.85req/s] [内存消耗：439.45kb] [文件加载：50]
+[ info ] [ LANG ] E:\UPUPW_AP5.4\vhosts\api.hzh.com\ucenter\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'system',
+    2 => 'clear',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'api.hzh.com',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://api.hzh.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0',
+  'referer' => 'http://api.hzh.com/ucenter/public/index/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'safedog-flow-item=E253EB9B0E7DD84F163BB541E31AF592; a3699_times=2; CNZZDATA726388=cnzz_eid%3D592620093-1481294422-%26ntime%3D1482045023; PHPSESSID=b0u054e39tnhontap2041tilc1; gkrgqmlusername=admin; gkrgqmluserid=1; gkrgqmlgroupid=1; gkrgqmlrnd=JsE9vhSa84ls2Isb4bU3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\System->clear[ E:\UPUPW_AP5.4\vhosts\api.hzh.com\ucenter\application\index\controller\System.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.589021s ] mysql:dbname=nhr82q;host=4xf7nzw4.2287.dnstoo.com;port=5512;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `phome_auth_rule` [ RunTime:0.061877s ]
+[ sql ] [ SQL ] SELECT * FROM `phome_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  desc,`id`  asc [ RunTime:0.009024s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `phome_enewsmemberadd` [ RunTime:0.010543s ]
+[ sql ] [ SQL ] SELECT * FROM `phome_enewsmemberadd` WHERE  `userid` = 1 LIMIT 1 [ RunTime:0.027110s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `phome_enewsmember` [ RunTime:0.012289s ]
+[ sql ] [ SQL ] SELECT `Enewsmember`.`userid`,`Enewsmember`.`groupid`,`Enewsmembergroup`.`groupname`,`Enewsmembergroup`.`rules` FROM `phome_enewsmember` `Enewsmember` LEFT JOIN `phome_enewsmembergroup` `Enewsmembergroup` ON `Enewsmember`.`groupid`=`Enewsmembergroup`.`groupid` WHERE  (  Enewsmember.userid='1' and Enewsmembergroup.checked='1' ) [ RunTime:0.011845s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `phome_auth_nav` [ RunTime:0.011856s ]
+[ sql ] [ SQL ] SELECT * FROM `phome_auth_nav` WHERE  `status` = 1 ORDER BY `sort`  desc,`id`  asc [ RunTime:0.010421s ]
+
+---------------------------------------------------------------
+[ 2016-12-23T22:42:35+08:00 ] 127.0.0.1 127.0.0.1 GET /ucenter/public/index/index/index.html
+[ log ] api.hzh.com/ucenter/public/index/index/index.html [运行时间：0.652276s][吞吐率：1.53req/s] [内存消耗：480.47kb] [文件加载：52]
+[ info ] [ LANG ] E:\UPUPW_AP5.4\vhosts\api.hzh.com\ucenter\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'api.hzh.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0',
+  'referer' => 'http://api.hzh.com/ucenter/public/index/index/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'safedog-flow-item=E253EB9B0E7DD84F163BB541E31AF592; a3699_times=2; CNZZDATA726388=cnzz_eid%3D592620093-1481294422-%26ntime%3D1482045023; PHPSESSID=b0u054e39tnhontap2041tilc1; gkrgqmlusername=admin; gkrgqmluserid=1; gkrgqmlgroupid=1; gkrgqmlrnd=JsE9vhSa84ls2Isb4bU3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\UPUPW_AP5.4\vhosts\api.hzh.com\ucenter\application\index\controller\Index.php ]
+[ info ] [ VIEW ] E:\UPUPW_AP5.4\vhosts\api.hzh.com\ucenter\public/../application/index\view\index\index.html [ array (
+  0 => 'userinfo',
+  1 => 'nav',
+  2 => 'menu',
+  3 => 'controller',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.017082s ] mysql:dbname=nhr82q;host=4xf7nzw4.2287.dnstoo.com;port=5512;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `phome_auth_rule` [ RunTime:0.012107s ]
+[ sql ] [ SQL ] SELECT * FROM `phome_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  desc,`id`  asc [ RunTime:0.010962s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `phome_enewsmemberadd` [ RunTime:0.010641s ]
+[ sql ] [ SQL ] SELECT * FROM `phome_enewsmemberadd` WHERE  `userid` = 1 LIMIT 1 [ RunTime:0.013332s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `phome_enewsmember` [ RunTime:0.013244s ]
+[ sql ] [ SQL ] SELECT `Enewsmember`.`userid`,`Enewsmember`.`groupid`,`Enewsmembergroup`.`groupname`,`Enewsmembergroup`.`rules` FROM `phome_enewsmember` `Enewsmember` LEFT JOIN `phome_enewsmembergroup` `Enewsmembergroup` ON `Enewsmember`.`groupid`=`Enewsmembergroup`.`groupid` WHERE  (  Enewsmember.userid='1' and Enewsmembergroup.checked='1' ) [ RunTime:0.012359s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `phome_auth_nav` [ RunTime:0.011747s ]
+[ sql ] [ SQL ] SELECT * FROM `phome_auth_nav` WHERE  `status` = 1 ORDER BY `sort`  desc,`id`  asc [ RunTime:0.015494s ]
+
+---------------------------------------------------------------
+[ 2016-12-23T22:42:36+08:00 ] 127.0.0.1 127.0.0.1 GET /ucenter/public/index/index/main.html
+[ log ] api.hzh.com/ucenter/public/index/index/main.html [运行时间：0.696256s][吞吐率：1.44req/s] [内存消耗：470.74kb] [文件加载：51]
+[ info ] [ LANG ] E:\UPUPW_AP5.4\vhosts\api.hzh.com\ucenter\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'main',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'api.hzh.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0',
+  'referer' => 'http://api.hzh.com/ucenter/public/index/index/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'safedog-flow-item=E253EB9B0E7DD84F163BB541E31AF592; a3699_times=2; CNZZDATA726388=cnzz_eid%3D592620093-1481294422-%26ntime%3D1482045023; PHPSESSID=b0u054e39tnhontap2041tilc1; gkrgqmlusername=admin; gkrgqmluserid=1; gkrgqmlgroupid=1; gkrgqmlrnd=JsE9vhSa84ls2Isb4bU3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->main[ E:\UPUPW_AP5.4\vhosts\api.hzh.com\ucenter\application\index\controller\Index.php ]
+[ info ] [ VIEW ] E:\UPUPW_AP5.4\vhosts\api.hzh.com\ucenter\public/../application/index\view\index\main.html [ array (
+  0 => 'userinfo',
+  1 => 'nav',
+  2 => 'menu',
+  3 => 'controller',
+  4 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.019190s ] mysql:dbname=nhr82q;host=4xf7nzw4.2287.dnstoo.com;port=5512;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `phome_enewsmember` [ RunTime:0.012661s ]
+[ sql ] [ SQL ] SELECT `Enewsmember`.`userid`,`Enewsmember`.`groupid`,`Enewsmembergroup`.`groupname`,`Enewsmembergroup`.`rules` FROM `phome_enewsmember` `Enewsmember` LEFT JOIN `phome_enewsmembergroup` `Enewsmembergroup` ON `Enewsmember`.`groupid`=`Enewsmembergroup`.`groupid` WHERE  (  Enewsmember.userid='1' and Enewsmembergroup.checked='1' ) [ RunTime:0.012314s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `phome_auth_rule` [ RunTime:0.009277s ]
+[ sql ] [ SQL ] SELECT * FROM `phome_auth_rule` WHERE  `status` = 1 ORDER BY `sort`  desc,`id`  asc [ RunTime:0.009069s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `phome_enewsmemberadd` [ RunTime:0.011692s ]
+[ sql ] [ SQL ] SELECT * FROM `phome_enewsmemberadd` WHERE  `userid` = 1 LIMIT 1 [ RunTime:0.012298s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `phome_auth_nav` [ RunTime:0.019430s ]
+[ sql ] [ SQL ] SELECT * FROM `phome_auth_nav` WHERE  `status` = 1 ORDER BY `sort`  desc,`id`  asc [ RunTime:0.011555s ]
+[ sql ] [ SQL ] SELECT VERSION() AS ver [ RunTime:0.019016s ]
+
+---------------------------------------------------------------
