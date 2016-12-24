@@ -4,21 +4,15 @@ if(!defined('InEmpireCMS'))
 	exit();
 }
 ?>
-<!DOCTYPE HTML PUBLIC -//W3C//DTD HTML 4.01 Transitional//EN>
-<html>
-<head>
-<meta http-equiv=Content-Type content=text/html; charset=utf-8>
-<title>我的购物车</title>
-<link href=../../data/images/qcss.css rel=stylesheet type=text/css>
-<script language="javascript">
-window.resizeTo(760,600);
-window.focus();
-</script>
-</head>
-
-<body>
+<?php
+$postword=$enews=='EditAddress'?'修改地址':'增加地址';
+$public_diyr['pagetitle']=$postword;
+$url="<a href=../../../>首页</a>&nbsp;>&nbsp;<a href=../../member/cp/>会员中心</a>&nbsp;>&nbsp;<a href='ListAddress.php'>配送地址列表</a>&nbsp;>&nbsp;".$postword;
+require(ECMS_PATH.'e/template/incfile/header.php');
+?>
 <?php
 include('buycar/buycar_form.php');
 ?>
-</body>
-</html>
+<?php
+require(ECMS_PATH.'e/template/incfile/footer.php');
+?>

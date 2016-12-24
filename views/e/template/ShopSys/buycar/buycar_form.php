@@ -14,7 +14,7 @@ $totalfen=0;	//商品总积分
 $buycarr=explode($record,$buycar);
 $bcount=count($buycarr);
 ?>
-<table width='100%' border=0 align=center cellpadding=3 cellspacing=1>
+<table width='100%' border=0 align=center cellpadding=3 cellspacing=1 class="table table-bordered table-striped">
   <form name=form1 method=post action='../doaction.php'>
   <input class="input input-auto" type=hidden name=enews value=EditBuycar>
     <tr class='header'> 
@@ -110,7 +110,7 @@ else
 <tr> 
     <td colspan="7" height="25"><div align="right">
 		<a href="../doaction.php?enews=ClearBuycar"><img src="../../data/images/shop/clearbuycar.gif" width=92 height=23 border=0></a>&nbsp;&nbsp;
-          <input class="input input-auto" name="imageField" type="image" src="../../data/images/shop/editbuycar.gif" width=135 height=23 border=0>
+          <input name="imageField" type="image" src="../../data/images/shop/editbuycar.gif" width=135 height=23 border=0>
           &nbsp;&nbsp;
 		<a href="javascript:window.close();"><img src="../../data/images/shop/buynext.gif" width=87 height=23 border=0></a>
 		&nbsp;&nbsp;

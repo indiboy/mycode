@@ -20,7 +20,7 @@ $cdh='';
 $buycarr=explode($record,$buycar);
 $bcount=count($buycarr);
 ?>
-<table width="100%" border=0 align=center cellpadding=3 cellspacing=1>
+<table width="100%" border=0 align=center cellpadding=3 cellspacing=1 class="table table-bordered table-striped">
 <tr class="header"> 
 	<td width="41%" height=23><div align="center">商品名称</div></td>
 	<td width="15%"><div align="center">市场价格</div></td>
