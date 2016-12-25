@@ -1,0 +1,55 @@
+{extend name="main" /} {block name="body"}
+<link href="/public/treetable/jquery.treetable.css" rel="stylesheet" ishttp="text/css" />
+<link href="/public/treetable/jquery.treetable.theme.default.css" rel="stylesheet" ishttp="text/css" />
+<div class="layout">
+	<!--tab标签-->
+	<div class="padding border-bottom">
+			<div class="button-toolbar">
+				<div class="button-group">
+            		<a class="button border-green icon-home" href="{:url('admin/menu/index')}"> 后台菜单</a>
+            		<a class="button border-green icon-plus" href="{:url('admin/menu/add')}"> 添加菜单</a>
+				</div>
+			</div>
+		</div>
+	<div class="table-responsive">
+		<table class="table table-hover table-bordered" id="example-basic">
+			<thead>
+				<tr>
+					<th>菜单名称</th>
+                        <th>ID</th>
+                        <th>排序</th>
+                        <th>控制器方法</th>
+                        <th>控制器类型</th>
+                        <th>状态</th>
+                        <th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				{foreach name="enewsuser_menu_level_list" item="vo"} {php}echo $vo['pid']==0 ? '
+				<tr data-tt-id="'.$vo['id'].'">' : '
+					<tr data-tt-id="'.$vo['id'].'" data-tt-parent-id="'.$vo['pid'].'">';{/php}
+
+						<td>{$vo.title}</td>
+						<td>{$vo.id}</td>
+						<td>{$vo.sort}</td>
+						<td>{$vo.name}</td>
+						<td>{php}echo $vo['ishttp']==0 ? '控制器' : '外链';{/php}</td>
+						<td>{php}echo $vo['status']==1 ? '显示' : '隐藏';{/php}</td>
+						<td>
+							<a href="{:url('index/menu/add',['pid'=>$vo['id']])}" class="layui-btn layui-btn-mini">添加子栏目</a>
+							<a href="{:url('index/menu/edit',['id'=>$vo['id']])}" class="layui-btn layui-btn-normal layui-btn-mini">编辑</a>
+							<a href="{:url('index/menu/delete',['id'=>$vo['id']])}" class="layui-btn layui-btn-danger layui-btn-mini ajax-delete">删除</a>
+						</td>
+					</tr>
+					{/foreach}
+			</tbody>
+		</table>
+	</div>
+</div>
+<script src="/public/treetable/jquery.treetable.js"></script>
+<script>
+	$("#example-basic").treetable({
+		expandable: true
+	});
+</script>
+{/block}
