@@ -3,7 +3,7 @@ if(!defined('InEmpireCMS'))
 {
 	exit();
 }
-?><table width='100%' align=center cellpadding=3 cellspacing=1 class="tableborder"><tr><td width='16%' height=25 bgcolor='ffffff'>标题(*)</td><td bgcolor='ffffff'><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#DBEAF5">
+?><table width='100%' align=center cellpadding=3 cellspacing=1 bgcolor='#DBEAF5'><tr><td width='16%' height=25 bgcolor='ffffff'>标题</td><td bgcolor='ffffff'><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#DBEAF5">
 <tr> 
   <td height="25" bgcolor="#FFFFFF">
 	<?=$tts?"<select name='ttid'><option value='0'>标题分类</option>$tts</select>":""?>
@@ -73,7 +73,7 @@ while($b_r=$empire->fetch($befrom_sql))
           <?=$b_class?>
         </select>
 <input type="button" name="wbutton" value="增加来源" onclick="window.open('NewsSys/BeFrom.php?<?=$ecms_hashur[ehref]?>&addsitename='+document.add.befrom.value);">
-</td></tr><tr><td height=25 colspan=2 bgcolor='ffffff'><div align=left>新闻正文(*)</div></td></tr></table><div style="background-color:#D0D0D0"><?=ECMS_ShowEditorVar("newstext",$ecmsfirstpost==1?"":stripSlashes($r[newstext]),"Default","","300","100%")?>
+</td></tr><tr><td height=25 colspan=2 bgcolor='ffffff'><div align=left>新闻正文</div></td></tr></table><div style='background-color:#D0D0D0'><?=ECMS_ShowEditorVar("newstext",$ecmsfirstpost==1?"":stripSlashes($r[newstext]),"Default","","300","100%")?>
 <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#DBEAF5">
           <tr> 
             <td bgcolor="#FFFFFF"> <input name="dokey" type="checkbox" value="1"<?=$r[dokey]==1?' checked':''?>>
@@ -102,4 +102,7 @@ while($b_r=$empire->fetch($befrom_sql))
       )</td>
           </tr>
         </table>
-</div>
+</div><table width='100%' align=center cellpadding=3 cellspacing=1 bgcolor='#DBEAF5'><tr><td width='16%' height=25 bgcolor='ffffff'>顶</td><td bgcolor='ffffff'>
+<input name="diggtop" type="text" id="diggtop" value="<?=$ecmsfirstpost==1?"":ehtmlspecialchars(stripSlashes($r[diggtop]))?>" size="">
+</td></tr><tr><td width='16%' height=25 bgcolor='ffffff'>踩</td><td bgcolor='ffffff'><input name="diggdown" type="text" id="diggdown" value="<?=$ecmsfirstpost==1?"":ehtmlspecialchars(stripSlashes($r[diggdown]))?>" size="">
+</td></tr></table>

@@ -1,7 +1,7 @@
 function DoDigg(classid, id, dotop) {
 	$.ajax({
 		type: "GET",
-		url: '/e/extend/digg/?classid=' + classid + '&id=' + id + '&dotop=' + dotop,
+		url: '/views/e/extend/digg/?classid=' + classid + '&id=' + id + '&dotop=' + dotop,
 		cache: false,
 		dataType: 'json',
 		data: {
@@ -43,7 +43,7 @@ function DoDigg(classid, id, dotop) {
 function nickname() {
 	$.ajax({
 		type: "GET",
-		url: '/e/extend/ajaxmember/index.php',
+		url: '/views/e/extend/ajaxmember/index.php',
 		cache: false,
 		dataType: 'text',
 		success: function(data) {
