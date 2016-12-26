@@ -9,7 +9,7 @@
         <div class="padding border-bottom">
 			<div class="button-toolbar">
 				<div class="button-group">
-            		<a class="button border-green icon-home" href="{:url('index/enewsmembergroup/index')}"> 权限组</a>
+            		<a class="button border-green icon-home" href="{:url('ucenter/enewsmembergroup/index')}"> 权限组</a>
             		<button type="button" class="button border-green icon-edit" disabled="disabled"> 编辑权限组</button>
 				</div>
 			</div>
@@ -62,7 +62,7 @@
         };
 
         $.ajax({
-            url: "{:url('index/enewsmembergroup/getJson')}",
+            url: "{:url('ucenter/enewsmembergroup/getJson')}",
             type: "post",
             dataType: "json",
             cache: false,
@@ -84,7 +84,7 @@
                 auth_rule_ids.push(item.id);
             });
             $.ajax({
-                url: "{:url('index/enewsmembergroup/updateAuthGroupRule')}",
+                url: "{:url('ucenter/enewsmembergroup/updateAuthGroupRule')}",
                 type: "post",
                 cache: false,
                 data: {

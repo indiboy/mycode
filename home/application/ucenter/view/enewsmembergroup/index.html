@@ -6,7 +6,7 @@
         <div class="padding border-bottom">
 			<div class="button-toolbar">
 				<div class="button-group">
-            		<a class="button border-green icon-home" href="{:url('index/enewsmembergroup/index')}"> 权限组</a>
+            		<a class="button border-green icon-home" href="{:url('ucenter/enewsmembergroup/index')}"> 权限组</a>
 				</div>
 			</div>
 		</div>
@@ -28,7 +28,7 @@
                         <td>{$vo.groupname}</td>
                         <td>{php}echo $vo['checked']==1 ? '禁用' : '启用';{/php}</td>
                         <td>
-                            <a href="{:url('index/enewsmembergroup/auth',['groupid'=>$vo['groupid']])}" class="layui-btn layui-btn-mini">授权</a>
+                            <a href="{:url('ucenter/enewsmembergroup/auth',['groupid'=>$vo['groupid']])}" class="layui-btn layui-btn-mini">授权</a>
                         </td>
                     </tr>
                     {/foreach}

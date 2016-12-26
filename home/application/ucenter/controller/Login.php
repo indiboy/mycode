@@ -1,5 +1,5 @@
 <?php
-namespace app\index\controller;
+namespace app\ucenter\controller;
 
 use think\Config;
 use think\Controller;
@@ -9,7 +9,7 @@ use think\Cookie;
 /**
  * 后台登录
  * Class Login
- * @package app\index\controller
+ * @package app\ucenter\controller
  */
 class Login extends Controller {
     /**
@@ -75,7 +75,7 @@ class Login extends Controller {
 						
 						$returnurl = Cookie::get('returnurl');
 						if(!$returnurl){
-							$returnurl = 'index/index/index';
+							$returnurl = 'ucenter/index/index';
 						}
                         $this->success('登录成功', $returnurl);
                     }
@@ -96,6 +96,6 @@ class Login extends Controller {
         Session::delete('enewsmember_rnd');
 		Session::delete('expire');
         EmptyEcmsCookie();
-        $this->success('退出成功', 'index/login/index');
+        $this->success('退出成功', 'ucenter/login/index');
     }
 }

@@ -1,5 +1,5 @@
 <?php
-namespace app\index\controller;
+namespace app\ucenter\controller;
 
 use app\common\controller\UcenterBase;
 use think\Cache;

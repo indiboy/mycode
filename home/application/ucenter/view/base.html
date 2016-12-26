@@ -58,7 +58,7 @@
 										<spn><img src="{$userinfo.userpic ?: '/views/e/data/images/nouserpic.gif'}" width="28" class="radius-circle"></spn> {:session('enewsmember_username')} <span class="downward"></span> </a>
 									<ul class="drop-menu">
 										<li>
-											<a href="{:url('index/login/logout')}">退出</a>
+											<a href="{:url('ucenter/login/logout')}">退出</a>
 										</li>
 									</ul>
 								</li>
@@ -74,10 +74,10 @@
 							<a>管理菜单</a>
 						</li>
 						<li class="layui-nav-item">
-							<a id="go-dashboard" href="{:url('index/index/index')}"><i class="fa fa-home"></i> 会员首页</a>
+							<a id="go-dashboard" href="{:url('ucenter/index/index')}"><i class="fa fa-home"></i> 会员首页</a>
 						</li>
 						<li class="layui-nav-item">
-							<a href="javascript:;" data-url="{:url('index/system/clear')}" id="clear-cache"><i class="fa fa-trash-o"></i> 清除缓存</a>
+							<a href="javascript:;" data-url="{:url('ucenter/system/clear')}" id="clear-cache"><i class="fa fa-trash-o"></i> 清除缓存</a>
 						</li>
 						{foreach name="menu" item="vo"} {if condition="isset($vo['children'])"}
 						<li class="layui-nav-item">
@@ -115,7 +115,7 @@
                 </ul>
                 <div class="layui-tab-content">
                     <div class="layui-tab-item layui-show">
-                        <iframe class="tab-main" src="{:url('index/index/main')}"></iframe>
+                        <iframe class="tab-main" src="{:url('ucenter/index/main')}"></iframe>
                     </div>
                 </div>
             </div>

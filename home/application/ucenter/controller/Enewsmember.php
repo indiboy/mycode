@@ -1,14 +1,14 @@
 <?php
-namespace app\index\controller;
+namespace app\ucenter\controller;
 
-use app\index\model\Enewsmember as EnewsmemberModel;
+use app\ucenter\model\Enewsmember as EnewsmemberModel;
 use app\common\controller\UcenterBase;
 use think\Config;
 use think\Db;
 /**
  * 用户管理
  * Class Enewsmember
- * @package app\index\controller
+ * @package app\ucenter\controller
  */
 class Enewsmember extends UcenterBase {
  

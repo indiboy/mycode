@@ -1,8 +1,8 @@
 <?php
-namespace app\index\controller;
+namespace app\ucenter\controller;
 
-use app\index\model\Enewsmembergroup as EnewsmembergroupModel;
-use app\index\model\AuthRule as AuthRuleModel;
+use app\ucenter\model\Enewsmembergroup as EnewsmembergroupModel;
+use app\ucenter\model\AuthRule as AuthRuleModel;
 use app\common\controller\UcenterBase;
 
 /**

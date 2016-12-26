@@ -1,7 +1,7 @@
 <?php
-namespace app\index\controller;
+namespace app\ucenter\controller;
 
-use app\index\model\AuthNav as AuthNavModel;
+use app\ucenter\model\AuthNav as AuthNavModel;
 use app\common\controller\UcenterBase;
 use think\Db;
 
