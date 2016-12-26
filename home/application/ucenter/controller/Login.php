@@ -29,8 +29,13 @@ class Login extends Controller {
         if($this->request->isPost()){
             $data            = $this->request->only(['username', 'password', 'lifetime', 'ecmsfrom', 'verify']);
             $validate_result = $this->validate($data, 'Login');
+            $where['username'] = $data['username'];
+            $enewsmember = Db::name('enewsmember')->field('userid,password,salt')->where($where)->find();
+            $ch_password=eDoCkMemberPw($data['password'],$enewsmember['password'],$enewsmember['salt'],2);
             if ($validate_result !== true) {
                 $this->error($validate_result);
+            }else if(!$ch_password) {
+                $this->error('密码错误');
             } else {
                 $where['username'] = $data['username'];
                 $enewsmember = Db::name('enewsmember')->field('userid,groupid,username,checked')->where($where)->find();			
