@@ -14,15 +14,10 @@ if($viewuid==$userid)
 }
 ?>
 <?=$spacegg?>
-<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#96C8F1">
+<table class="table table-bordered table-striped">
   <tr>
-    <td height="24" background="template/default/images/bg_title_sider.gif">
-      <table width="100%" border="0" cellspacing="0" cellpadding="0">
-		<tr>
-			<td>留言板</td>
-			<td align="right"><?=$adminmenu?></td>
-		</tr>
-	  </table>
+    <td>
+    	<h3 class="text-big">留言板 <small><?=$adminmenu?></small></h3>
     </td>
   </tr>
   <tr>
@@ -42,7 +37,7 @@ if($viewuid==$userid)
 			$ip=' IP: '.$r[ip];
 			$adminlink="[<a href='#ecms' onclick=\"window.open('../member/mspace/ReGbook.php?gid=$r[gid]','','width=600,height=380,scrollbars=yes');\">回复</a>]&nbsp;&nbsp;[<a href='../member/mspace/?enews=DelMemberGbook&gid=$r[gid]' onclick=\"return confirm('确认要删除?');\">删除</a>]";
 		}
-		$gbuname=$r[uname]." 留言于".$r[addtime].$ip;
+		$gbuname=$r[uname]." <small>留言于 ".$r[addtime]."</small>";
 		//私密
 		if($r['isprivate'])
 		{
@@ -56,14 +51,11 @@ if($viewuid==$userid)
 			}
 		}
 	?>
-		<table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+		<table class="table table-bordered table-striped">
         <tr> 
-          <td height="23"><table width="100%" border="0" cellspacing="0" cellpadding="0">
-              <tr>
-                <td width="76%"><?=$gbuname?></td>
-                <td width="24%"><div align="right"><?=$adminlink?></div></td>
-              </tr>
-            </table></td>
+          <td>
+          	<h3 class="text-big"><?=$gbuname?> <small><?=$adminlink?></small></h3>
+          </td>
         </tr>
         <tr bgcolor="#FFFFFF"> 
           <td height="25" style='word-break:break-all'>
@@ -72,7 +64,7 @@ if($viewuid==$userid)
 			if($r['retext'])
 			{
 			?>
-			<table border=0 width='100%' cellspacing=1 cellpadding=10 bgcolor='#cccccc'>
+			<table class="table table-bordered table-striped">
             <tr> 
             <td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'> 
              <?=nl2br($r['retext'])?>
@@ -89,18 +81,18 @@ if($viewuid==$userid)
 	<?php
 	}
 	?>
-	<table width="100%" border="0" cellspacing="0" cellpadding="0">
-		<tr>
-          <td height="25">&nbsp;<?=$returnpage?></td>
-        </tr>
-	</table>
+	<div class="padding">
+    <ul class="pagination pagination-group">
+    <?=$returnpage ?>
+    </ul>
+    </div>
 	</td>
   </tr>
 </table>
 <br>
-<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#96C8F1">
+<table class="table table-bordered table-striped">
   <tr> 
-    <td background="template/default/images/bg_title_sider.gif"><b>添加留言</b></td>
+    <td><b class="text-big">添加留言</b></td>
   </tr>
   <tr> 
     <td bgcolor="#FFFFFF">
@@ -110,27 +102,37 @@ if($viewuid==$userid)
 	  <input type="hidden" name="enews" value="AddMemberGbook">
         <tr> 
           <td width="16%">昵称：</td>
-          <td width="84%"><input name="uname" type="text" id="uname" value="<?=RepPostStr(getcvar('mlusername'),1)?>">
-              私密
-              <input name="isprivate" type="checkbox" id="isprivate" value="1"></td>
+          <td width="84%">
+          	<div class="form-group">
+		<div class="field">
+			<div class="input-group">
+				<span class="addon">
+            <label><input name="isprivate" type="checkbox" id="isprivate" value="1"> 私密</label></span>
+				<input name="uname" class="input" type="text" id="uname" value="<?=RepPostStr(getcvar('mlusername'),1)?>">
+			</div>
+		</div>
+	</div>
+              </td>
         </tr>
         <tr> 
           <td valign="top">内容：</td>
-          <td><textarea name="gbtext" cols="60" rows="5" id="gbtext"></textarea></td>
+          <td><textarea name="gbtext" class="input" cols="60" rows="5" id="gbtext"></textarea></td>
         </tr>
         <tr> 
           <td>验证码：</td>
             <td> 
-              <table width="160" border="0" cellspacing="0" cellpadding="0">
-                <tr>
-                  <td width="75"><input name="key" type="text" size="10" /></td>
-                  <td width="85"><img src="<?=$public_r[newsurl]?>e/ShowKey/?v=spacegb" name="spacegbKeyImg" id="spacegbKeyImg" onclick="spacegbKeyImg.src='<?=$public_r[newsurl]?>e/ShowKey/?v=spacegb&t='+Math.random()" title="看不清楚,点击刷新" /></td>
-                </tr>
-              </table></td>
+            	<div class="form-group">
+		<div class="field">
+			<div class="input-group">
+				<input name="key" class="input input-auto" type="text" /><span class="addon"><img src="<?=$public_r[newsurl]?>e/ShowKey/?v=spacegb" name="spacegbKeyImg" id="spacegbKeyImg" onclick="spacegbKeyImg.src='<?=$public_r[newsurl]?>e/ShowKey/?v=spacegb&t='+Math.random()" title="看不清楚,点击刷新" /></span>
+			</div>
+		</div>
+	</div>
+</td>
         </tr>
         <tr> 
           <td>&nbsp;</td>
-          <td><input type="submit" name="Submit" value="发表留言"></td>
+          <td><input type="submit" class="button border-dot" name="Submit" value="发表留言"></td>
         </tr>
 		</form>
       </table></td>

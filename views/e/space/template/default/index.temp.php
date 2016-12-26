@@ -17,27 +17,20 @@ $usersay=$addur['saytext']?$addur['saytext']:'暂无简介';
 $usersay=RepFieldtextNbsp(stripSlashes($usersay));
 ?>
 <?=$spacegg?>
-<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#96C8F1">
-  <tr>
-    <td background="template/default/images/bg_title_sider.gif"><b>个人介绍</b></td>
-  </tr>
-  <tr>
-    <td bgcolor="#FFFFFF"> <table width="100%" border="0" cellspacing="0" cellpadding="0">
-        <tr>
-          <td>
-            <?=nl2br($usersay)?>
-          </td>
-        </tr>
-      </table></td>
-  </tr>
-</table>
-<br>
-<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#96C8F1">
-  <tr> 
-    <td background="template/default/images/bg_title_sider.gif"><b>详细信息</b></td>
-  </tr>
-  <tr> 
-    <td bgcolor="#FFFFFF"><table width="100%" border="0" cellspacing="1" cellpadding="3">
+<div class="panel margin-bottom">
+	<div class="panel-head">
+	<h3 class="text-big">个人介绍</h3>
+	</div>
+	<div class="panel-body">
+	<?=nl2br($usersay)?>
+	</div>
+</div>
+<div class="panel">
+	<div class="panel-head">
+	<h3 class="text-big">详细信息</h3>
+	</div>
+	<div class="panel-body">
+	<table class="table table-bordered table-striped">
         <tr> 
           <td width="18%">用户名</td>
           <td width="82%"> 
@@ -106,9 +99,9 @@ $usersay=RepFieldtextNbsp(stripSlashes($usersay));
             <?=$addur[zip]?>
           </td>
         </tr>
-      </table> </td>
-  </tr>
-</table>
+      </table>
+	</div>
+</div>
 <?php
 include("footer.temp.php");
 ?>

@@ -55,74 +55,103 @@ $sql=$empire->query($query);
 $listpage=page1($num,$line,$page_line,$start,$page,$search);
 $url="<a href='".ReturnSiteIndexUrl()."'>".$fun_r['index']."</a>&nbsp;>&nbsp;".$fun_r['saygbook'];
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>留言板 - Powered by EmpireCMS</title>
-<meta name="keywords" content="<?=$bname?>" />
-<meta name="description" content="<?=$bname?>" />
-<link href="/views/skin/default/css/style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="/views/skin/default/js/tabs.js"></script>
-</head>
-<body class="listpage">
-<!-- 页头 -->
-<table width="100%" border="0" cellspacing="0" cellpadding="0" class="top">
-<tr>
-<td><table width="100%" border="0" cellspacing="0" cellpadding="0">
-<tr>
-<td width="63%">
-<!-- 登录 -->
-<script>
-document.write('<script src="/views/e/member/login/loginjs.php?t='+Math.random()+'"><'+'/script>');
-</script>
-</td>
-<td align="right">
-<a onclick="window.external.addFavorite(location.href,document.title)" href="#ecms">加入收藏</a> | <a onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('/views/')" href="#ecms">设为首页</a> | <a href="/views/e/member/cp/">会员中心</a> | <a href="/views/e/DoInfo/">我要投稿</a> | <a href="/views/e/web/?type=rss2" target="_blank">RSS<img src="/views/skin/default/images/rss.gif" border="0" hspace="2" /></a>
-</td>
-</tr>
-</table></td>
-</tr>
-</table>
-<table width="100%" border="0" cellpadding="0" cellspacing="10">
-<tr valign="middle">
-<td width="240" align="center"><a href="/views/"><img src="/views/skin/default/images/logo.gif" width="200" height="65" border="0" /></a></td>
-<td align="center"><a href="http://www.phome.net/OpenSource/" target="_blank"><img src="/views/skin/default/images/opensource.gif" width="100%" height="70" border="0" /></a></td>
-</tr>
-</table>
-<!-- 导航tab选项卡 -->
-<table width="920" border="0" align="center" cellpadding="0" cellspacing="0" class="nav">
-  <tr> 
-    <td class="nav_global"><ul>
-        <li class="curr" id="tabnav_btn_0" onmouseover="tabit(this)"><a href="/views/">首页</a></li>
-        <li id="tabnav_btn_1" onmouseover="tabit(this)"><a href="/views/news/">新闻中心</a></li>
-        <li id="tabnav_btn_2" onmouseover="tabit(this)"><a href="/views/download/">下载中心</a></li>
-        <li id="tabnav_btn_3" onmouseover="tabit(this)"><a href="/views/movie/">影视频道</a></li>
-        <li id="tabnav_btn_4" onmouseover="tabit(this)"><a href="/views/shop/">网上商城</a></li>
-        <li id="tabnav_btn_5" onmouseover="tabit(this)"><a href="/views/flash/">FLASH频道</a></li>
-        <li id="tabnav_btn_6" onmouseover="tabit(this)"><a href="/views/photo/">图片频道</a></li>
-        <li id="tabnav_btn_7" onmouseover="tabit(this)"><a href="/views/article/">文章中心</a></li>
-        <li id="tabnav_btn_8" onmouseover="tabit(this)"><a href="/views/info/">分类信息</a></li>
-      </ul></td>
-  </tr>
-</table>
-<table width="100%" border="0" cellspacing="10" cellpadding="0">
-<tr valign="top">
-<td class="list_content"><table width="100%" border="0" cellspacing="0" cellpadding="0" class="position">
-<tr>
-<td>现在的位置：<a href=../../../>首页</a>&nbsp;>&nbsp;<?=$bname?>
-</td>
-</tr>
-</table><table width="100%" border="0" cellspacing="0" cellpadding="0" class="box">
-	<tr>
-		<td><table width="100%" border="0" cellpadding="3" cellspacing="2">
-			<tr>
-				<td align="center" bgcolor="#E1EFFB"><strong><?=$bname?></strong></td>
-			</tr>
-			<tr>
-				<td align="left" valign="top"><table width="100%" border="0" cellpadding="4" cellspacing="0" bgcolor="#FFFFFF">
-						<tr>
-							<td height="100%" valign="top" bgcolor="#FFFFFF"> 
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title><?=$bname?> - 官方网站,郑州妈妈首选育儿、情感、生活等交流互动平台</title>
+		<meta name="keywords" content="<?=$bname?>" />
+		<meta name="description" content="<?=$bname?>" />
+		<meta name="renderer" content="webkit" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="/public/pintuer/pintuer.css">
+		<link rel="stylesheet" href="/public/layui/css/layui.css">
+		<link rel="stylesheet" href="/public/css/css.css">
+		<script src="/public/pintuer/jquery.js"></script>
+		<script src="/public/layui/lay/dest/layui.all.js"></script>
+		<script src="/public/pintuer/pintuer.js"></script>
+		<script src="/public/js/ajax.js"></script>
+		<!--[if lt IE 9]>
+		<script src="/public/js/respond.min.js"></script>
+		<script src="/public/js/html5shiv.min.js"></script>
+		<![endif]-->
+		<script src="/public/js/header.js"></script>
+	</head>
+
+	<body>
+		<div class="layout navbar navbar-big bg-red bg-inverse doc-header">
+	<div class="container">
+		<div class="line">
+			<div class="xs3 xm3 xb2">
+				<div class="navbar-head">
+					<button class="button bg icon-navicon" data-target="#navbar-big2">
+										</button>
+					<a href="/">
+						<img src="/public/images/logo.png" alt="大河妈妈网" class="logo" />
+					</a>
+				</div>
+
+			</div>
+			<div class="xl12 xs9 xm9 xb10">
+				<div class="navbar-body nav-navicon" id="navbar-big2">
+					<ul class="nav nav-inline nav-menu nav-big text-right">
+															<li class="">
+								<a href="/reads/" class="">
+									阅读								</a>
+							</li>
+																		<li class="">
+								<a href="/meiwen/" class="">
+									美文								</a>
+							</li>
+																		<li class="">
+								<a href="/cartoon/" class="">
+									动画								</a>
+							</li>
+																		<li class="">
+								<a href="/television/" class="">
+									影视								</a>
+							</li>
+																		<li class="">
+								<a href="/photo/" class="">
+									图片								</a>
+							</li>
+																		<li class="">
+								<a href="/download/" class="">
+									下载								</a>
+							</li>
+																		<li class="">
+								<a href="/taobao/" class="">
+									淘宝								</a>
+							</li>
+																		<li class="">
+								<a href="/shop/" class="">
+									商城								</a>
+							</li>
+												</ul>
+				</div>
+				<ul class="nav nav-inline nav-big nav-menu navbar-right">
+					<script>
+						document.write('<script src="/views/e/member/login/loginjs.php?t=' + Math.random() + '"><' + '/script>');
+					</script>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<br />
+		<div class="container">
+			<div class="line">
+				<div class="x12">
+					<ul class="bread bg">
+						现在的位置：
+						<a href=../../../>
+						首页</a>&nbsp;>&nbsp;<?=$bname?>
+					</ul>
+					
 <?
 while($r=$empire->fetch($sql))
 {
@@ -130,132 +159,87 @@ while($r=$empire->fetch($sql))
 	$r['lytext']=nl2br($r[lytext]);
 ?>
 
-								<table width="92%" border="0" align="center" cellpadding="4" cellspacing="1" bgcolor="#F4F9FD" class="tableborder">
-										<tr class="header">
-											<td width="55%" height="23">发布者: <?=$r[name]?> </td>
-											<td width="45%">发布时间: <?=$r[lytime]?> </td>
-										</tr>
-										<tr bgcolor="#FFFFFF">
-											<td height="23" colspan="2"><table border="0" width="100%" cellspacing="1" cellpadding="8" bgcolor='#cccccc'>
-													<tr>
-														<td width='100%' bgcolor='#FFFFFF' style='word-break:break-all'> <?=$r[lytext]?> </td>
-													</tr>
-												</table>
-												
+					<div class="panel margin-bottom">
+						<div class="panel-head">
+							<h3 class="text-big"><small>发布者: </small> <?=$r[name]?> <small>发布于 <?=$r[lytime]?></small></h3>
+						</div>
+						<div class="panel-body">
+							<div>
+								<?=$r[lytext]?>
+							</div>
+							
 <?
 if($r[retext])
 {
 ?>
 
-												<table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
-													<tr>
-														<td><img src="../../data/images/regb.gif" width="18" height="18" /><strong><font color="#FF0000">回复:</font></strong> <?=$r[retext]?> </td>
-													</tr>
-												</table>
-												
+							<div class="panel margin-top">
+								<div class="panel-body">
+									<span class="text-red">管理员回复：</span><?=$r[retext]?>
+								</div>
+							</div>
+							
 <?
 }
-?> </td>
-										</tr>
-									</table>
-								<br />
-								
+?>
+						</div>
+					</div>
+					
 <?
 }
 ?>
 
-								<table width="92%" border="0" align="center" cellpadding="4" cellspacing="1">
-									<tr>
-										<td>分页: <?=$listpage?></td>
-									</tr>
-								</table>
-								<form action="../../enews/index.php" method="post" name="form1" id="form1">
-									<table width="92%" border="0" align="center" cellpadding="4" cellspacing="1"class="tableborder">
-										<tr class="header">
-											<td colspan="2" bgcolor="#F4F9FD"><strong>请您留言:</strong></td>
-										</tr>
-										<tr bgcolor="#FFFFFF">
-											<td width="20%">姓名:</td>
-											<td width="722" height="23"><input name="name" type="text" id="name" />
-												*</td>
-										</tr>
-										<tr bgcolor="#FFFFFF">
-											<td>联系邮箱:</td>
-											<td height="23"><input name="email" type="text" id="email" />
-												*</td>
-										</tr>
-										<tr bgcolor="#FFFFFF">
-											<td>联系电话:</td>
-											<td height="23"><input name="mycall" type="text" id="mycall" /></td>
-										</tr>
-										<tr bgcolor="#FFFFFF">
-											<td>留言内容(*):</td>
-											<td height="23"><textarea name="lytext" cols="60" rows="12" id="lytext"></textarea></td>
-										</tr>
-										<tr bgcolor="#FFFFFF">
-											<td height="23">&nbsp;</td>
-											<td height="23"><input type="submit" name="Submit3" value="提交" />
-											<input type="reset" name="Submit22" value="重置" />
-											<input name="enews" type="hidden" id="enews" value="AddGbook" /></td>
-										</tr>
-									</table>
-								</form></td>
-						</tr>
-				</table></td>
-			</tr>
-		</table></td>
-	</tr>
-</table></td>
-</tr>
-</table>
-<!-- 页脚 -->
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
-<tr>
-<td align="center" class="search">
-<form action="/views/e/search/index.php" method="post" name="searchform" id="searchform">
-<table border="0" cellspacing="6" cellpadding="0">
-<tr>
-<td><strong>站内搜索：</strong>
-<input name="keyboard" type="text" size="32" id="keyboard" class="inputText" />
-<input type="hidden" name="show" value="title" />
-<input type="hidden" name="tempid" value="1" />
-<select name="tbname">
-<option value="news">新闻</option>
-<option value="download">下载</option>
-<option value="photo">图库</option>
-<option value="flash">FLASH</option>
-<option value="movie">电影</option>
-<option value="shop">商品</option>
-<option value="article">文章</option>
-<option value="info">分类信息</option>
-</select>
-</td>
-<td><input type="image" class="inputSub" src="/views/skin/default/images/search.gif" />
-</td>
-<td><a href="/views/search/" target="_blank">高级搜索</a></td>
-</tr>
-</table>
-</form>
-</td>
-</tr>
-<tr>
-<td>
-	<table width="100%" border="0" cellpadding="0" cellspacing="4" class="copyright">
-        <tr> 
-          <td align="center"><a href="/views/">网站首页</a> | <a href="#">关于我们</a> 
-            | <a href="#">服务条款</a> | <a href="#">广告服务</a> | <a href="#">联系我们</a> 
-            | <a href="#">网站地图</a> | <a href="#">免责声明</a> | <a href="/views/e/wap/" target="_blank">WAP</a></td>
-        </tr>
-        <tr> 
-          <td align="center">Powered by <strong><a href="http://www.phome.net" target="_blank">EmpireCMS</a></strong> 
-            <strong><font color="#FF9900">7.2</font></strong>&nbsp; &copy; 2002-2015 
-            <a href="http://www.digod.com" target="_blank">EmpireSoft Inc.</a></td>
-        </tr>
-	</table>
-</td>
-</tr>
-</table>
-</body>
+					<ul class="pagination pagination-group">
+						<?=$listpage?>
+					</ul>
+					<form action="../../enews/index.php" method="post" name="form1" id="form1">
+						<table  class="table table-bordered table-striped">
+							<tr class="header">
+								<td colspan="2"><h3 class="text-big">请您留言:</h3></td>
+							</tr>
+							<tr bgcolor="#FFFFFF">
+								<td width="200">姓名:</td>
+								<td>
+									<input name="name" class="input" type="text" id="name" />
+								</td>
+							</tr>
+							<tr bgcolor="#FFFFFF">
+								<td>联系邮箱:</td>
+								<td>
+									<input name="email" type="text" class="input" id="email" />
+								</td>
+							</tr>
+							<tr bgcolor="#FFFFFF">
+								<td>联系电话:</td>
+								<td>
+									<input name="mycall" type="text" class="input" id="mycall" />
+								</td>
+							</tr>
+							<tr bgcolor="#FFFFFF">
+								<td>留言内容(*):</td>
+								<td>									<textarea name="lytext" cols="60" class="input" rows="12" id="lytext"></textarea></td>
+							</tr>
+							<tr bgcolor="#FFFFFF">
+								<td>&nbsp;</td>
+								<td>
+									<input type="submit" class="button border-dot" name="Submit3" value="提交" />
+									<input type="reset" name="Submit22" class="button border-dot" value="重置" />
+									<input name="enews" type="hidden" id="enews" value="AddGbook" />
+								</td>
+							</tr>
+						</table>
+					</form></td>
+					</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<br />
+<div class="layout copyright text-center padding-big text-small">版权所有 不知何网</div>
+		<script src="/public/js/layui.js"></script>
+		<script src="/public/js/bottom.js"></script>
+	</body>
+
 </html>
 <?php
 db_close();

@@ -57,13 +57,13 @@ if($myuserid)
 if($mhavelogin==1)
 {
 ?>
-document.write("<li>	<a class=\"bg-main\" href=\"javascript:;\">		<spn><img src=\"<?=$userpic?>\" width=\"28\" class=\"radius-circle\"></spn>		<?=$myusername?>		<span class=\"downward\"></span>	</a>	<ul class=\"drop-menu\">		<li>			<a href=\"/views/e/space/?userid=<?=$myuserid?>\" target=_blank>我的空间</a>		</li>		<li>			<a href=\"/home/public/ucenter/index/index.html\" target=\"_parent\">控制面板</a>		</li>		<li>			<a href=\"/views/e/member/doaction.php?enews=exit&ecmsfrom=9\" onclick=\"return confirm(\'确认要退出?\');\">退出</a>		</li>	</ul></li>");
+document.write("<div class=\"form-group\"><a href=\"javascript:;\" id=\"loginoutpl\" class=\"button\">已登录</a></div>");
 <?
 }
 else
 {
 ?>
-document.write("<li>	<a class=\"bg-main\" href=\"javascript:;\">		<spn><img src=\"/views/e/data/images/nouserpic.gif\" width=\"28\" class=\"radius-circle\"></spn>		请登录		<span class=\"downward\"></span>	</a>	<ul class=\"drop-menu\">		<li>			<a href=\"/views/e/memberconnect/?apptype=qq\" class=\"icon-qq\" target=\"_blank\"> QQ登陆</a>		</li>		<li>			<a href=\"/views/e/member/login/\" target=\"_parent\">登陆</a>		</li>		<li>			<a href=\"/views/e/member/register/\" target=\"_parent\">注册</a>		</li>	</ul></li>");
+document.write("<div class=\"form-group\"><div class=\"input-group\"><span class=\"addon icon-user\"></span><input type=\"text\" class=\"input\" id=\"username\" name=\"username\" value=\"大河妈妈网\" placeholder=\"请输入昵称\"><a class=\"addon\" id=\"nickname\" href=\"###\">换一换</a></div></div>");
 <?
 }
 ?>

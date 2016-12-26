@@ -1,139 +1,133 @@
 <?php
-if(!defined('InEmpireCMS'))
-{
+if (!defined('InEmpireCMS')) {
 	exit();
 }
 //公告
-$spacegg='';
-if($addur['spacegg'])
-{
-	$spacegg='<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#96C8F1">
-  <tr>
-    <td background="template/default/images/bg_title_sider.gif"><b>公告</b></td>
-  </tr>
-  <tr>
-    <td bgcolor="#FFFFFF"> <table width="100%" border="0" cellspacing="0" cellpadding="0">
-        <tr>
-          <td>
-            '.$addur['spacegg'].'
-          </td>
-        </tr>
-      </table></td>
-  </tr>
-</table>
-<br>';
+$spacegg = '';
+if ($addur['spacegg']) {
+	$spacegg = '<div class="panel margin-bottom">
+	<div class="panel-head">
+	<h3 class="text-big">公告</h3>
+    </div>
+	<div class="panel-body">' . $addur['spacegg'] . '</div>
+</div>';
 }
 //导航菜单
-$dhmenu='';
-$modsql=$empire->query("select mid,qmname from {$dbtbpre}enewsmod where usemod=0 and showmod=0 and qenter<>'' order by myorder,mid");
-while($modr=$empire->fetch($modsql))
-{
-	$dhmenu.="<td width=70 height=24 onmouseover='ChangeMenuBg(this,mod".$modr[mid].")' onmouseout='ChangeMenuBg2(this,mod".$modr[mid].")' align='center' onclick=\"self.location.href='list.php?userid=$userid&mid=$modr[mid]';\"><font color='#FFFFFF' id='mod".$modr[mid]."'><strong>".$modr[qmname]."</strong></font></td>";
+$dhmenu = '';
+$modsql = $empire -> query("select mid,qmname from {$dbtbpre}enewsmod where usemod=0 and showmod=0 and qenter<>'' order by myorder,mid");
+while ($modr = $empire -> fetch($modsql)) {
+	$dhmenu .= "<li><a href=\"list.php?userid=$userid&mid=$modr[mid]\">" . $modr[qmname] . "</a> </li>";
 }
 ?>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title><?=$spacename?> - Powered by EmpireCMS</title>
-<meta content="<?=$spacename?>" name="keywords" />
-<meta content="<?=$spacename?>" name="description" />
-<link href="template/default/images/style.css" rel="stylesheet" type="text/css" />
-<script>
-function ChangeMenuBg(doobj,dofont){
-	doobj.style.cursor="hand";
-	doobj.style.background='url(template/default/images/nav_a_bg3.gif)';
-	dofont.style.color='#000000';
-}
-function ChangeMenuBg2(doobj,dofont){
-	doobj.style.background='';
-	dofont.style.color='#ffffff';
-}
-</script>
-</head>
-<body topmargin="0">
-<table width="778" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="F7F7F7">
-  <tr>
-    <td height="20">&nbsp;<font color="#666666"> 
-      <?=$spacename?>
-      </font></td>
-    <td align="right"><a href="<?=$public_r[newsurl]?>">网站首页</a> | <a onClick="window.external.addFavorite('<?=$spaceurl?>','<?=$spacename?>')" href="#ecms">加入收藏</a> 
-      | <a onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('<?=$spaceurl?>')" href="#ecms">设为首页</a></td>
- </tr>
-</table>
-<table width="778" height="108" border="0" align="center" cellpadding="0" cellspacing="8" background="template/default/images/head_bg.gif">
-  <tr> 
-    <td valign="middle"><table width="97%" border="0" align="center" cellpadding="0" cellspacing="0">
-        <tr> 
-          <td width="15%"></td>
-          <td><font style="font-family:宋体;font-size:20px;color:FFFFFF;font-weight:normal;font-style:normal;"><strong><?=$spacename?></strong></font><br><span style='line-height=15pt'><a href="<?=$spaceurl?>"><font color="ffffff"><?=$spaceurl?></font></a></span></td>
-        </tr>
-      </table></td>
-  </tr>
-</table>
-<table width="778" border="0" align="center" cellpadding="0" cellspacing="0">
-  <tr>
-    <td height="32" background="template/default/images/nav_bg2.gif">
-<table border="0" cellspacing="0" cellpadding="0">
-        <tr> 
-          <td width="10">&nbsp;</td>
-          <td width="70" height="24" onMouseOver="ChangeMenuBg(this,mhome)" onMouseOut="ChangeMenuBg2(this,mhome)" align="center" onClick="self.location.href='index.php?userid=<?=$userid?>';"><font color="#FFFFFF" id="mhome"><strong>空间首页</strong></font></td>
-			<?=$dhmenu?>
-          <td width="70" height="24" onMouseOver="ChangeMenuBg(this,muserinfo)" onMouseOut="ChangeMenuBg2(this,muserinfo)" align="center" onClick="self.location.href='UserInfo.php?userid=<?=$userid?>';"><font color="#FFFFFF" id="muserinfo"><strong>个人资料</strong></font></td>
-		  <td width="70" height="24" onMouseOver="ChangeMenuBg(this,mgbook)" onMouseOut="ChangeMenuBg2(this,mgbook)" align="center" onClick="self.location.href='gbook.php?userid=<?=$userid?>';"><font color="#FFFFFF" id="mgbook"><strong>留言板</strong></font></td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-  <tr>
-    <td height="23" bgcolor="B3DBF5">&nbsp;&nbsp;您现在的位置：
-      <?=$url?>
-    </td>
-  </tr>
-</table>
-<table width="778" border="0" cellpadding="0" cellspacing="0" align="center">
-  <tr>
-  <td colspan="2"><table width="778" border="0" align="center" cellpadding="0" cellspacing="0">
-        <tr>
-          <td width="220" valign="top"> <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#96C8F1">
-              <tr> 
-                <td background="template/default/images/bg_title_sider.gif">&nbsp;</td>
-              </tr>
-              <tr> 
-                <td bgcolor="#FFFFFF"><table width="100%" border="0" cellspacing="6" cellpadding="0">
-                    <tr> 
-                      <td height="25"><div align="center"><img src="<?=$userpic?>" width="158" height="158" style="border:1px solid #cccccc;" /></div></td>
-                    </tr>
-                    <tr> 
-                      <td height="25"><div align="center"><a href="UserInfo.php?userid=<?=$userid?>">
-                          <?=$username?>
-                          </a></div></td>
-                    </tr>
-                  </table> </td>
-              </tr>
-            </table>
-            <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#96C8F1">
-              <tr> 
-                <td background="template/default/images/bg_title_sider.gif"><strong>用户菜单</strong></td>
-              </tr>
-              <tr> 
-                <td bgcolor="#FFFFFF"><table width="100%" border="0" cellspacing="6" cellpadding="3">
-                    <tr> 
-                      <td height="25"><a href="../member/friend/add/?fname=<?=$username?>" target="_blank">加为好友</a></td>
-                      <td><a href="../member/msg/AddMsg/?username=<?=$username?>" target="_blank">发短消息</a></td>
-                    </tr>
-                    <tr> 
-                      <td height="25"><a href="UserInfo.php?userid=<?=$userid?>">用户资料</a></td>
-                      <td><a href="../member/cp">管理面板</a></td>
-                    </tr>
-                  </table> </td>
-              </tr>
-            </table>
-			<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#96C8F1">
-			<tr>
-				<td background="template/default/images/bg_title_sider.gif">访问统计：<?=$addur[viewstats]?></td>
-			</tr>
-			</table>
-          </td>
-          <td valign="top"><table width="98%" height="360" border="0" align="right" cellpadding="0" cellspacing="0" bgcolor="#F4F9FD">
-              <tr>
-                <td valign="top">
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title><?=$spacename ?> - 官方网站,郑州妈妈首选育儿、情感、生活等交流互动平台</title>
+		<meta content="<?=$spacename ?>" name="keywords" />
+		<meta content="<?=$spacename ?>" name="description" />
+		<meta name="renderer" content="webkit" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="/public/pintuer/pintuer.css">
+		<link rel="stylesheet" href="/public/layui/css/layui.css">
+		<link rel="stylesheet" href="/public/css/css.css">
+		<link rel="stylesheet" href="/public/css/usercp.css">
+		<script src="/public/pintuer/jquery.js"></script>
+		<script src="/public/layui/lay/dest/layui.all.js"></script>
+		<script src="/public/pintuer/pintuer.js"></script>
+		<!--[if lt IE 9]>
+		<script src="/public/js/respond.min.js"></script>
+		<script src="/public/js/html5shiv.min.js"></script>
+		<![endif]-->
+		<script src="/public/js/header.js"></script>
+	</head>
+
+	<body>
+			<div class="container">
+				<div class="line">
+					<div class="x12" style="background: url(<?=$covers ?>) top center no-repeat;">
+				<div class="clearfix"></div>
+				<div class="media margin-large media-y">
+	<a href="#" class="badge-corner">
+		<img src="<?=$userpic ?>" class="radius-circle img-border" width="120" height="120" />
+		<span class="badge bg-red"><?=$level_r[$groupid][groupname]?></span>
+	</a>
+	<div class="media-body">
+		<h2 class="text-large"><?=$truename ?></h2>
+	</div>
+</div>
+			</div>
+			</div>
+			</div>
+			<div class="container">
+				<div class="navbar navbar-big bg-red bg-inverse radius-none">
+					<div class="navbar-head">
+						<button class="button bg icon-navicon" data-target="#navbar-big2">
+										</button>
+						<a href="index.php?userid=<?=$userid ?>">
+							<img class="logo" src="/public/images/logo-white.png">
+						</a>
+					</div>
+					<div class="navbar-body nav-navicon" id="navbar-big2">
+						<ul class="nav nav-inline nav-menu nav-big">
+							<li>
+								<a href="index.php?userid=<?=$userid ?>">空间首页</a>
+							</li>
+							<?=$dhmenu ?>
+								<li>
+									<a href="UserInfo.php?userid=<?=$userid ?>">个人资料</a>
+								</li>
+								<li>
+									<a href="gbook.php?userid=<?=$userid ?>">留言板</a>
+								</li>
+						</ul>
+						<div class="navbar-text navbar-right hidden-s">
+							<button type="button" class="button bg-white">
+												按钮</button>
+						</div>
+					</div>
+				</div>
+				<ul class="bread bg radius-none">您现在的位置：
+					<?=$url ?>
+				</ul>
+			</div>
+
+			<div class="container">
+				<div class="line-big">
+					<div class="xl12 xs12 xm6 xb4">
+						<div class="panel margin-bottom">
+							<div class="panel-head">
+								<h3 class="text-big">管理面板</h3></div>
+								<div class="panel-body">
+							<table class="table table-bordered text-center table-striped">
+								<tr>
+									<td>
+										<a href="../member/friend/add/?fname=<?=$username ?>" target="_blank">加为好友</a>
+									</td>
+									<td>
+										<a href="../member/msg/AddMsg/?username=<?=$username ?>" target="_blank">发短消息</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<a href="UserInfo.php?userid=<?=$userid ?>">用户资料</a>
+									</td>
+									<td>
+										<a href="../member/cp">管理面板</a>
+									</td>
+								</tr>
+							</table>
+							</div>
+						</div>
+						<div class="panel margin-bottom">
+							<div class="panel-body text-big">
+								访问统计：<?=$addur[viewstats] ?>
+							</div>
+						</div>
+
+					</div>
+					<div class="xl12 xs12 xm6 xb8">

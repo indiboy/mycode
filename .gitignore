@@ -1,10 +1,5 @@
 runtime
 d
-/views/e/data/fc
-/views/e/data/filecache
-/views/e/data/tmp
-/views/e/data/adminlogin
-/views/e/data/dbcache
 /.idea
 /views/info
 /views/movie
@@ -14,3 +9,4 @@ d
 /views/article
 /views/download
 /views/flash
+data

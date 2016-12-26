@@ -55,6 +55,9 @@ UpdateSpaceViewStats($userid);//统计访问
 $addur=$empire->fetch1("select * from {$dbtbpre}enewsmemberadd where userid='".$userid."' limit 1");
 //头像
 $userpic=$addur['userpic']?$addur['userpic']:$public_r[newsurl].'e/data/images/nouserpic.gif';
+$truename=$addur['truename']?$addur['truename']:'暂无昵称';
+$covers=$addur['covers']?$addur['covers']:$public_r[newsurl].'theme/user/banner.jpg';
+
 //空间地址
 $spaceurl=eReturnDomainSiteUrl()."e/space/?userid=".$userid;
 //空间名称

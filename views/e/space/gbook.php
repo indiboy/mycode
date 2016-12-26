@@ -5,6 +5,7 @@ require("../class/q_functions.php");
 require("../data/dbcache/class.php");
 require LoadLang("pub/fun.php");
 require("../member/class/user.php");
+require("../data/dbcache/MemberLevel.php");
 $link=db_connect();
 $empire=new mysqlquery();
 $userid=0;
