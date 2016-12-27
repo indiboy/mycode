@@ -5,8 +5,9 @@
 		<div class="padding border-bottom">
 			<div class="button-toolbar">
 				<div class="button-group">
-					<a class="button border-green icon-home" href="{:url('admin/admin_email/index')}"> 邮件模板管理</a>
+					<a class="button border-green icon-home"  href="{:url('admin/admin_email/index')}"> 邮件模板管理</a>
 					<button type="button" class="button border-green icon-plus" disabled="disabled"> 添加邮件模板</button>
+					<a class="button border-green icon-plus" href="{:url('admin/admin_email/test')}"> 邮件测试</a>
 				</div>
 			</div>
 		</div>
@@ -32,41 +33,35 @@
 						</div>
 					</div>
 					<div class="layui-form-item">
-						<label class="layui-form-label">别名</label>
-						<div class="layui-input-block">
-							<input type="text" name="alias" value="" placeholder="（选填）请输入邮件模板别名" class="layui-input">
-						</div>
-					</div>
-					<div class="layui-form-item">
-						<label class="layui-form-label">链接</label>
-						<div class="layui-input-block">
-							<input type="text" name="classurl" value="" placeholder="（选填）请输入邮件模板链接" class="layui-input">
-						</div>
-					</div>
-					<div class="layui-form-item">
-						<label class="layui-form-label">图标</label>
-						<div class="layui-input-block">
-							<input type="text" name="icon" value="" placeholder="（选填）如：fa fa-home" class="layui-input">
-						</div>
-					</div>
-					<div class="layui-form-item">
 						<label class="layui-form-label">状态</label>
 						<div class="layui-input-block">
-							<input type="radio" name="status" value="1" title="显示" checked="checked">
-							<input type="radio" name="status" value="0" title="隐藏">
-						</div>
-					</div>
-					<div class="layui-form-item">
-						<label class="layui-form-label">打开方式</label>
-						<div class="layui-input-block">
-							<input type="radio" name="target" value="_self" title="默认" checked="checked">
-							<input type="radio" name="target" value="_blank" title="新窗口">
+							<input type="radio" name="status" value="1" title="可用" checked="checked">
+							<input type="radio" name="status" value="0" title="禁用">
 						</div>
 					</div>
 					<div class="layui-form-item">
 						<label class="layui-form-label">排序</label>
 						<div class="layui-input-block">
 							<input type="text" name="sort" value="0" required lay-verify="required" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">邮件标题</label>
+						<div class="layui-input-block">
+							<input type="text" name="subject" value="" required  lay-verify="required" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">邮件形式</label>
+						<div class="layui-input-block">
+							<input type="radio" name="ishtml" value="1" title="HTML" checked="checked">
+							<input type="radio" name="ishtml" value="0" title="文本">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">邮件内容</label>
+						<div class="layui-input-block">
+							<textarea id="saytext" name="saytext" placeholder="请输入内容" class="layui-textarea"></textarea>
 						</div>
 					</div>
 					<div class="layui-form-item">

@@ -65,12 +65,6 @@
                         </div>
                     </div>
                     <div class="layui-form-item">
-                        <label class="layui-form-label">附件</label>
-                        <div class="layui-input-block">
-                            <input type="file" name="attach" class="layui-upload-file">
-                        </div>
-                    </div>
-                    <div class="layui-form-item">
                         <div class="layui-input-block">
                             <input type="hidden" name="id" value="{$email.id}">
                             <button class="layui-btn" lay-submit lay-filter="*">更新</button>
@@ -82,16 +76,4 @@
         </div>
     </div>
 </div>
-<script>
-    layui.use('upload,layedit', function(){
-        layui.upload({
-            url: '上传接口url'
-            ,success: function(res){
-                console.log(res); //上传成功返回值，必须为json格式
-            }
-        });
-        var layedit = layui.layedit;
-        layedit.build('saytext'); //建立编辑器
-    });
-</script>
 {/block}

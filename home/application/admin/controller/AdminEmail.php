@@ -4,6 +4,7 @@ namespace app\admin\controller;
 use app\admin\model\AdminEmail as AdminEmailModel;
 use app\common\controller\AdminBase;
 use think\Db;
+use mailer\tp5\Mailer;
 
 /**
  * 邮件发送
@@ -29,6 +30,38 @@ class AdminEmail extends AdminBase {
     public function index() {
         return $this->fetch();
     }
+
+    /**
+     * 邮件测试
+     * @return mixed
+     */
+    public function test() {
+        return $this->fetch();
+    }
+
+    /**
+     * 邮件测试
+     * @return mixed
+     */
+    public function dotest() {
+        if ($this->request->isPost()) {
+            $data            = $this->request->post();
+            $validate_result = true;
+
+            if ($validate_result !== true) {
+                $this->error($validate_result);
+            } else {
+                $mailer = Mailer::instance();
+                $mailer->from('tianpian0805@gmail.com', 'yuan1994')
+                    ->to('your-mail@domain.com')
+                    ->subject('纯文本测试')
+                    ->text('欢迎您使用Tp Mailer')
+                    ->send();
+            }
+        }
+    }
+
+
 
     /**
      * 添加导航

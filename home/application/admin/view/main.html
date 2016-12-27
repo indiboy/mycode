@@ -36,6 +36,9 @@
 			<script src="/public/js/usercp.js"></script>
 			{block name="js"}{/block}
 			<script>
+                var GV = {
+                    current_controller: "admin/{$controller}"
+                };
 				layui.config({
 					base: '/public/js/'
 				}).use('main');

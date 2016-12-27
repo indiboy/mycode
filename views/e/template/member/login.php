@@ -39,15 +39,15 @@ require(ECMS_PATH.'e/template/incfile/header.php');
 	 <tr bgcolor="#FFFFFF">
       <td height="25">保存时间：</td>
       <td height="25">
-	  <input class="input input-auto" name=lifetime type=radio value=0 checked>
+	  <input name=lifetime type=radio value=0 checked>
         不保存
-	    <input class="input input-auto" type=radio name=lifetime value=3600>
+	    <input type=radio name=lifetime value=3600>
         一小时 
-        <input class="input input-auto" type=radio name=lifetime value=86400>
+        <input type=radio name=lifetime value=86400>
         一天 
-        <input class="input input-auto" type=radio name=lifetime value=2592000>
+        <input type=radio name=lifetime value=2592000>
         一个月
-<input class="input input-auto" type=radio name=lifetime value=315360000>
+<input type=radio name=lifetime value=315360000>
         永久 </td>
     </tr>
     <?php

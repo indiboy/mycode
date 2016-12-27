@@ -1,0 +1,64 @@
+{extend name="main" /} {block name="body"}
+<div class="layout">
+    <!--tab标签-->
+    <div class="layui-tab layui-tab-brief">
+        <div class="padding border-bottom">
+            <div class="button-toolbar">
+                <div class="button-group">
+                    <a class="button border-green icon-home" href="{:url('admin/enewsmember_connect_app/index')}">
+                        账号互通管理</a>
+                    <a class="button border-green icon-plus" href="{:url('admin/enewsmember_connect_app/add')}">
+                        添加账号互通</a>
+                </div>
+            </div>
+        </div>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+                <div class="table-responsive">
+                    <table class="table table-hover table-bordered" id="example-basic">
+                        <thead>
+                        <tr>
+                            <th>接口名称</th>
+                            <th>接口类型</th>
+                            <th>接口状态</th>
+                            <th>接口别名</th>
+                            <th>接口描述</th>
+                            <th>appid</th>
+                            <th>appkey</th>
+                            <th>显示排序</th>
+                            <th>绑定人数</th>
+                            <th>登录次数</th>
+                            <th>登录次数</th>
+                            <th>回调地址</th>
+                            <th>接口配置</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {foreach name="enewsmember_connect_app_level_list" item="vo"}
+                        <tr>
+                            <td>{$vo.appname}</td>
+                            <td>{$vo.apptype}</td>
+                            <td>{if condition="$vo.isclose==1"}<a class="layui-btn layui-btn-normal layui-btn-mini">开启</a>{else /}<a class="layui-btn layui-btn-danger layui-btn-mini">关闭</a>{/if}</td>
+                            <td>{$vo.qappname}</td>
+                            <td>{$vo.appsay}</td>
+                            <td>{$vo.appid}</td>
+                            <td>{$vo.appkey}</td>
+                            <td>{$vo.appkey}</td>
+                            <td>{$vo.myorder}</td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <a href="{:url('admin/enewsmember_connect_app/edit',['id'=>$vo['id']])}"
+                                   class="layui-btn layui-btn-normal layui-btn-mini">编辑</a>
+                            </td>
+                        </tr>
+                        {/foreach}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{/block}
