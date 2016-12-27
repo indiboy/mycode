@@ -7,6 +7,7 @@ namespace Composer\Autoload;
 class ComposerStaticInit99573c54f4d7dcf04c4e257f6c750649
 {
     public static $files = array (
+        '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         '1cfd2761b63b0a29ed23657ea394cb2d' => __DIR__ . '/..' . '/topthink/think-captcha/src/helper.php',
     );
 
@@ -17,6 +18,14 @@ class ComposerStaticInit99573c54f4d7dcf04c4e257f6c750649
             'think\\captcha\\' => 14,
             'think\\auth\\' => 11,
             'think\\' => 6,
+        ),
+        'm' => 
+        array (
+            'mailer\\' => 7,
+        ),
+        'a' => 
+        array (
+            'anerg\\OAuth2\\' => 13,
         ),
     );
 
@@ -36,6 +45,14 @@ class ComposerStaticInit99573c54f4d7dcf04c4e257f6c750649
         'think\\' => 
         array (
             0 => __DIR__ . '/../..' . '/thinkphp/library/think',
+        ),
+        'mailer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/yuan1994/tp-mailer/src/mailer',
+        ),
+        'anerg\\OAuth2\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/anerg2046/sns_auth/src',
         ),
     );
 

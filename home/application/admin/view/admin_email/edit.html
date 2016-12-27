@@ -1,0 +1,97 @@
+{extend name="main" /}
+{block name="body"}
+<div class="layout">
+    <!--tab标签-->
+    <div class="layui-tab layui-tab-brief">
+        <div class="padding border-bottom">
+			<div class="button-toolbar">
+				<div class="button-group">
+					<a class="button border-green icon-home" href="{:url('admin/admin_email/index')}"> 邮件模板管理</a>
+					<a class="button border-green icon-plus" href="{:url('admin/admin_email/add')}"> 添加邮件模板</a>
+					<button type="button" class="button border-green icon-edit" disabled="disabled"> 编辑邮件模板</button>
+				</div>
+			</div>
+		</div>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+                <form class="layui-form form-container" action="{:url('admin/admin_email/update')}" method="post">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">上级邮件模板</label>
+                        <div class="layui-input-block">
+                            <select name="pid" required lay-verify="required">
+                                <option value="0">一级邮件模板</option>
+                                {foreach name="admin_email_level_list" item="vo"}
+                                <option value="{$vo.id}" {if condition="$email.pid==$vo.id"} disabled="disabled"{/if} {if condition="$email.pid==$vo.id"} selected="selected"{/if}>{neq name="vo.level" value="1"}|{php}for($i=1;$i<$vo['level'];$i++){echo ' ----';}{/php}{/neq} {$vo.name}</option>
+                                {/foreach}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">邮件模板名称</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="name" value="{$email.name}" required  lay-verify="required" placeholder="请输入邮件模板名称" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">状态</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="status" value="1" title="可用" {if condition="$email.status==1"} checked="checked"{/if}>
+                            <input type="radio" name="status" value="0" title="禁用" {if condition="$email.status==0"} checked="checked"{/if}>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">排序</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="sort" value="{$email.sort}" required  lay-verify="required" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">邮件标题</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="subject" value="{$email.subject}" required  lay-verify="required" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">邮件形式</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="ishtml" value="1" title="HTML" {if condition="$email.ishtml==1"} checked="checked"{/if}>
+                            <input type="radio" name="ishtml" value="0" title="文本" {if condition="$email.ishtml==0"} checked="checked"{/if}>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">邮件内容</label>
+                        <div class="layui-input-block">
+                            <textarea id="saytext" name="saytext" placeholder="请输入内容" class="layui-textarea">{$email.saytext}</textarea>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">附件</label>
+                        <div class="layui-input-block">
+                            <input type="file" name="attach" class="layui-upload-file">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <input type="hidden" name="id" value="{$email.id}">
+                            <button class="layui-btn" lay-submit lay-filter="*">更新</button>
+                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    layui.use('upload,layedit', function(){
+        layui.upload({
+            url: '上传接口url'
+            ,success: function(res){
+                console.log(res); //上传成功返回值，必须为json格式
+            }
+        });
+        var layedit = layui.layedit;
+        layedit.build('saytext'); //建立编辑器
+    });
+</script>
+{/block}

@@ -36,9 +36,9 @@
 						<td>{php}echo $vo['ishttp']==0 ? '控制器' : '外链';{/php}</td>
 						<td>{php}echo $vo['status']==1 ? '显示' : '隐藏';{/php}</td>
 						<td>
-							<a href="{:url('index/menu/add',['pid'=>$vo['id']])}" class="layui-btn layui-btn-mini">添加子栏目</a>
-							<a href="{:url('index/menu/edit',['id'=>$vo['id']])}" class="layui-btn layui-btn-normal layui-btn-mini">编辑</a>
-							<a href="{:url('index/menu/delete',['id'=>$vo['id']])}" class="layui-btn layui-btn-danger layui-btn-mini ajax-delete">删除</a>
+							<a href="{:url('admin/menu/add',['pid'=>$vo['id']])}" class="layui-btn layui-btn-mini">添加子栏目</a>
+							<a href="{:url('admin/menu/edit',['id'=>$vo['id']])}" class="layui-btn layui-btn-normal layui-btn-mini">编辑</a>
+							<a href="{:url('admin/menu/delete',['id'=>$vo['id']])}" class="layui-btn layui-btn-danger layui-btn-mini ajax-delete">删除</a>
 						</td>
 					</tr>
 					{/foreach}

@@ -20,7 +20,9 @@
         "topthink/framework": "^5.0",
         "topthink/think-captcha": "^1.0",
         "5ini99/think-auth": "^1.0",
-        "gee-team/gt-php-sdk": "^15.12"
+        "gee-team/gt-php-sdk": "^15.12",
+        "yuan1994/tp-mailer": "^0.2.4",
+        "anerg2046/sns_auth": "^1.0"
     },
     "extra": {
         "think-path": "thinkphp"

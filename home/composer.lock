@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3597db910a0f825a1debe1c4c34c6bcf",
-    "content-hash": "ae3b7c5f9364e47763f1533f6c634371",
+    "hash": "7545e7a46b97e64ec06b002216f25595",
+    "content-hash": "db8279027a71a94bc8660a5343f614e7",
     "packages": [
         {
             "name": "5ini99/think-auth",
@@ -45,6 +45,42 @@
             "time": "2016-11-02 06:26:09"
         },
         {
+            "name": "anerg2046/sns_auth",
+            "version": "1.0.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/anerg2046/sns_auth.git",
+                "reference": "97a1b9aa98cdc757de8d6e08d4d14c466b2280b4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://packagist.phpcomposer.com/files/anerg2046/sns_auth/97a1b9aa98cdc757de8d6e08d4d14c466b2280b4.zip",
+                "reference": "97a1b9aa98cdc757de8d6e08d4d14c466b2280b4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "anerg\\OAuth2\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Coeus",
+                    "email": "r.anerg@gmail.com"
+                }
+            ],
+            "description": "weixin weibo qq sns oauth",
+            "time": "2016-12-26 09:11:59"
+        },
+        {
             "name": "gee-team/gt-php-sdk",
             "version": "15.12.04",
             "source": {
@@ -79,6 +115,59 @@
             ],
             "description": "GtWeb Php Demo",
             "time": "2015-12-04 09:21:56"
+        },
+        {
+            "name": "swiftmailer/swiftmailer",
+            "version": "v5.4.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/swiftmailer/swiftmailer.git",
+                "reference": "545ce9136690cea74f98f86fbb9c92dd9ab1a756"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://packagist.phpcomposer.com/files/swiftmailer/swiftmailer/545ce9136690cea74f98f86fbb9c92dd9ab1a756.zip",
+                "reference": "545ce9136690cea74f98f86fbb9c92dd9ab1a756",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.4-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "lib/swift_required.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Corbyn"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Swiftmailer, free feature-rich PHP mailer",
+            "homepage": "http://swiftmailer.org",
+            "keywords": [
+                "email",
+                "mail",
+                "mailer"
+            ],
+            "time": "2016-11-24 01:01:23"
         },
         {
             "name": "topthink/framework",
@@ -208,6 +297,56 @@
                 }
             ],
             "time": "2016-12-01 09:08:45"
+        },
+        {
+            "name": "yuan1994/tp-mailer",
+            "version": "v0.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yuan1994/tp-mailer.git",
+                "reference": "7fe9b64d69be67a325a2708368b99edf44d17981"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://packagist.phpcomposer.com/files/yuan1994/tp-mailer/7fe9b64d69be67a325a2708368b99edf44d17981.zip",
+                "reference": "7fe9b64d69be67a325a2708368b99edf44d17981",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "swiftmailer/swiftmailer": "^5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "mailer\\": "src/mailer"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache 2.0"
+            ],
+            "authors": [
+                {
+                    "name": "yuan1994",
+                    "email": "tianpian0805@gmail.com",
+                    "homepage": "https://github.com/yuan1994/tp-mailer/",
+                    "role": "Owner"
+                }
+            ],
+            "description": "A powerful and beautiful php mailer for All of ThinkPHP and Other PHP Frameworks based SwiftMailer",
+            "homepage": "https://github.com/yuan1994/tp-mailer/",
+            "keywords": [
+                "mail",
+                "mailer",
+                "phpmailer",
+                "swiftmailer",
+                "thinkphp",
+                "tp",
+                "tp-mailer",
+                "tp5-mailer"
+            ],
+            "time": "2016-12-10 11:54:45"
         }
     ],
     "packages-dev": [],
