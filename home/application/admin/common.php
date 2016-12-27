@@ -1,37 +1,6 @@
 <?php
 //验证密码
-function eDoCkMemberPw($oldpw,$pw,$salt,$pwtype){
-    $istrue=0;
-    if($pwtype==0)//单重md5
-    {
-        $oldpw=md5($oldpw);
-        if($oldpw==$pw)
-        {
-            $istrue=1;
-        }
-    }
-    elseif($pwtype==1)//明码
-    {
-        if($oldpw==$pw)
-        {
-            $istrue=1;
-        }
-    }
-    elseif($pwtype==3)//16位md5
-    {
-        $oldpw=substr(md5($oldpw),8,16);
-        if($oldpw==$pw)
-        {
-            $istrue=1;
-        }
-    }
-    else//双重md5
-    {
-        $oldpw=md5(md5($oldpw).$salt);
-        if($oldpw==$pw)
-        {
-            $istrue=1;
-        }
-    }
-    return $istrue;
+function DoEmpireCMSAdminPassword($password,$salt,$salt2){
+    $pw=md5($salt2.'E!m^p-i(r#e.C:M?S'.md5(md5($password).$salt).'d)i.g^o-d'.$salt);
+    return $pw;
 }

@@ -6,20 +6,48 @@ function eDoMemberPw($password, $salt) {
 }
 
 //验证密码
-function eDoCkMemberPw($oldpw, $pw, $salt) {
-	$istrue = 0;
-	$oldpw = md5(md5($oldpw) . $salt);
-	if ($oldpw == $pw) {
-		$istrue = 1;
-	}
-	return $istrue;
+function eDoCkMemberPw($oldpw,$pw,$salt,$pwtype){
+    $istrue=0;
+    if($pwtype==0)//单重md5
+    {
+        $oldpw=md5($oldpw);
+        if($oldpw==$pw)
+        {
+            $istrue=1;
+        }
+    }
+    elseif($pwtype==1)//明码
+    {
+        if($oldpw==$pw)
+        {
+            $istrue=1;
+        }
+    }
+    elseif($pwtype==3)//16位md5
+    {
+        $oldpw=substr(md5($oldpw),8,16);
+        if($oldpw==$pw)
+        {
+            $istrue=1;
+        }
+    }
+    else//双重md5
+    {
+        $oldpw=md5(md5($oldpw).$salt);
+        if($oldpw==$pw)
+        {
+            $istrue=1;
+        }
+    }
+    return $istrue;
 }
+
 function EmptyEcmsCookie(){
-			$set1=esetcookie("mlusername","",0);
-			$set2=esetcookie("mluserid","",0);
-			$set3=esetcookie("mlgroupid","",0);
-			$set4=esetcookie("mlrnd","",0);
-			$set5=esetcookie("mlauth","",0);
+			esetcookie("mlusername","",0);
+			esetcookie("mluserid","",0);
+			esetcookie("mlgroupid","",0);
+			esetcookie("mlrnd","",0);
+			esetcookie("mlauth","",0);
 }
 //设置COOKIE
 function esetcookie($var,$val,$life=0,$ecms=0){
