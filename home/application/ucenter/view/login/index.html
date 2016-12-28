@@ -86,7 +86,7 @@
 			</div>
 		</div>
 		<div id="particles">
-			<div id="login" style="max-width: 400px;min-width: 400px;margin: 0 auto;">
+			<div id="login" style="max-width: 420px;min-width: 420px;margin: 0 auto;">
 				<div class="panel bg-white">
 					<div class="panel-head">
 						<h3 class="text-big">后台管理系统</h3>
@@ -124,22 +124,37 @@
 							</div>
 							<div class="form-group">
 								<div class="field">
-									<select name="lifetime" class="input">
-										<option value="0">免登陆时间</option>
-										<option value="0">不保存</option>
-										<option value="3600">一小时 </option>
-										<option value="86400">一天 </option>
-										<option value="2592000">一个月</option>
-										<option value="315360000">永久 </option>
-									</select>
+									<div class="button-group button-group-justified radio">
+										<label class="button active">
+											<input name="lifetime" value="0" checked="checked" type="radio"><span class="icon icon-check text-green"></span>不保存
+										</label>
+										<label class="button">
+											<input name="lifetime" value="86400" type="radio"><span class="icon icon-check text-green"></span>一天
+										</label>
+										<label class="button">
+											<input name="lifetime" value="606800" type="radio"><span class="icon icon-check text-green"></span>一周
+										</label>
+									</div>
 								</div>
 							</div>
 							<div class="form-button">
-								<button class="button button-block" type="submit">
+								<button class="button button-block border-blue" type="submit">
 											登录</button>
 							</div>
 							<input type="hidden" name="ecmsfrom" value="" />
 						</form>
+						<div class="button-toolbar margin-top">
+							<div class="button-group">
+								<a href="{:url('oauth/index/qq')}" class="button icon-qq text-blue">
+									QQ</a>
+								<a href="{:url('oauth/index/weibo')}" class="button icon-weibo text-green">
+									微博</a>
+								<a href="{:url('oauth/index/weixin')}" class="button icon-weixin text-yellow">
+									微信</a>
+								<a href="{:url('oauth/index/wx_qrcode')}" class="button icon-qrcode text-red">
+									扫码</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
