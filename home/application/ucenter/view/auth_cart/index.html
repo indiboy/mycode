@@ -1,0 +1,60 @@
+{extend name="main" /} {block name="body"}
+<link href="/public/treetable/jquery.treetable.css" rel="stylesheet" type="text/css" />
+<link href="/public/treetable/jquery.treetable.theme.default.css" rel="stylesheet" type="text/css" />
+<div class="layout">
+	<!--tab标签-->
+	<div class="layui-tab layui-tab-brief">
+		<div class="padding border-bottom">
+			<div class="button-toolbar">
+				<div class="button-group">
+					<button type="button" class="button border-green icon-home" disabled="disabled"> 导航管理</button>
+					<a class="button border-green icon-plus" href="{:url('ucenter/auth_cart/add')}"> 添加导航</a>
+				</div>
+			</div>
+		</div>
+		<div class="layui-tab-content">
+			<div class="layui-tab-item layui-show">
+				<div class="table-responsive">
+					<table class="table table-hover table-bordered" id="example-basic">
+						<thead>
+							<tr>
+								<th>产品名称</th>
+								<th>产品图片</th>
+								<th>原价</th>
+								<th>现价</th>
+								<th>数量</th>
+								<th>总价</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							{foreach name="cart_level_list" item="vo"} {php}echo $vo['pid']==0 ? '
+							<tr data-tt-id="'.$vo['id'].'">' : '
+								<tr data-tt-id="'.$vo['id'].'" data-tt-parent-id="'.$vo['pid'].'">';{/php}
+
+									<td>{$vo.title}</td>
+									<td>{$vo.titlepic}</td>
+								 	<td>{$vo.price}</td>
+									<td>{$vo.tprice}</td>
+									<td>{$vo.buy_num}</td>
+									<td>{$vo.buy_num}</td>
+									<td>
+										<a href="{:url('ucenter/auth_cart/delete',['id'=>$vo['id']])}" class="layui-btn layui-btn-danger layui-btn-mini ajax-delete">删除</a>
+									</td>
+								</tr>
+								{/foreach}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+<script src="/public/treetable/jquery.treetable.js"></script>
+<script>
+	$("#example-basic").treetable({
+		expandable: true
+	});
+</script>
+{/block}
