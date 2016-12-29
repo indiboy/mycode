@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7545e7a46b97e64ec06b002216f25595",
-    "content-hash": "db8279027a71a94bc8660a5343f614e7",
+    "hash": "dff32f29c6ae77678c02115d3f68e171",
+    "content-hash": "9a400d7d8a4b67a7d4555eb0057a107c",
     "packages": [
         {
             "name": "5ini99/think-auth",
@@ -115,6 +115,47 @@
             ],
             "description": "GtWeb Php Demo",
             "time": "2015-12-04 09:21:56"
+        },
+        {
+            "name": "mike182uk/cart",
+            "version": "v2.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mike182uk/cart.git",
+                "reference": "5630d8e65df823a608fa59fe2600f6901270a9d1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://packagist.phpcomposer.com/files/mike182uk/cart/5630d8e65df823a608fa59fe2600f6901270a9d1.zip",
+                "reference": "5630d8e65df823a608fa59fe2600f6901270a9d1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "fabpot/php-cs-fixer": "~1.0",
+                "mockery/mockery": "~0.0",
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Cart\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael David Barrett",
+                    "email": "mike182uk@gmail.com"
+                }
+            ],
+            "description": "A flexible and modern shopping cart package",
+            "time": "2016-11-24 21:55:44"
         },
         {
             "name": "swiftmailer/swiftmailer",

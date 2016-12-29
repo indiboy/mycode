@@ -27,6 +27,10 @@ class ComposerStaticInit99573c54f4d7dcf04c4e257f6c750649
         array (
             'anerg\\OAuth2\\' => 13,
         ),
+        'C' => 
+        array (
+            'Cart\\' => 5,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -53,6 +57,10 @@ class ComposerStaticInit99573c54f4d7dcf04c4e257f6c750649
         'anerg\\OAuth2\\' => 
         array (
             0 => __DIR__ . '/..' . '/anerg2046/sns_auth/src',
+        ),
+        'Cart\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mike182uk/cart/src',
         ),
     );
 

@@ -12,4 +12,5 @@ return array(
     'think\\' => array($baseDir . '/thinkphp/library/think'),
     'mailer\\' => array($vendorDir . '/yuan1994/tp-mailer/src/mailer'),
     'anerg\\OAuth2\\' => array($vendorDir . '/anerg2046/sns_auth/src'),
+    'Cart\\' => array($vendorDir . '/mike182uk/cart/src'),
 );
