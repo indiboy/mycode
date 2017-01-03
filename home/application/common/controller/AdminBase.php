@@ -38,7 +38,7 @@ class AdminBase extends Controller {
     protected function getAdminMenu() {
         $adminmenu     = [];
         $enewsuser_userid = Session::get('enewsuser_userid');
-        $admin_rule_list = Db::name('admin_rule')->where('status', 1)->order(['id' => 'asc', 'sort' => 'asc'])->select();
+        //$admin_rule_list = Db::name('admin_rule')->where('status', 1)->order(['sort' => 'asc', 'id' => 'asc'])->select();
         $userinfo = Db::name('enewsuser')->find($enewsuser_userid);
         foreach ($admin_rule_list as $value) {
             if ($enewsuser_userid == 1) {

@@ -79,10 +79,10 @@
 						<li class="layui-nav-item">
 							<a href="javascript:;" data-url="{:url('admin/system/clear')}" id="clear-cache"><i class="fa fa-trash-o"></i> 清除缓存</a>
 						</li>
-						{foreach name="adminmenu" item="vo"} {if condition="isset($vo['children'])"}
+						{foreach name="adminmenu" item="vo"}
 						<li class="layui-nav-item">
 							<a href="javascript:;"><i class="{$vo.icon}"></i> {$vo.title}</a>
-							{foreach name="vo['children']" item="v"}
+							{foreach name="" item="v"}
 							<dl class="layui-nav-child">
 								<dd>
 									{if condition="($v.ishttp==0)"}
@@ -102,7 +102,7 @@
 							<a href="{$vo.name}"><i class="{$vo.icon}"></i> {$vo.title}</a>
 							{/if}			
 						</li>
-						{/if} {/foreach}
+						 {/foreach}
 						<li class="layui-nav-item" style="height: 30px; text-align: center"></li>
 					</ul>
 				</div>

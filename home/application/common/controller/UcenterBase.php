@@ -58,14 +58,17 @@ class UcenterBase extends Controller {
         $menu     = [];
         $enewsmember_userid = Session::get('enewsmember_userid');
         $auth     = new Auth();
-        $auth_rule_list = Db::name('auth_rule')->where('status', 1)->order(['id' => 'asc', 'sort' => 'asc'])->select();
+        $auth_rule_list = Db::name('auth_rule')->where('status', 1)->order(['sort' => 'desc', 'id' => 'asc'])->select();
         $userinfo = Db::name('enewsmemberadd')->find($enewsmember_userid);
+        //print_r($auth_rule_list);
+        //die;
         foreach ($auth_rule_list as $value) {
             if ($auth->check($value['name'], $enewsmember_userid) || $enewsmember_userid == 1) {
                 $menu[] = $value;
             }
         }
 		$nav =  Db::name('auth_nav')->where('status', 1)->order(['sort' => 'asc', 'id' => 'asc'])->select();
+
         $menu = !empty($menu) ? array2tree($menu) : [];
         $this->assign('userinfo', $userinfo);
 		$this->assign('nav', $nav);
